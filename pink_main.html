@@ -373,6 +373,7 @@ PMAX_H //高さ
 <% ========== ミニレスフォーム欄 ========== %>
 <% def(resform) %>
 <div class="clear"></div>
+<% def(oya/disp_resform) %>
 <form action="<% echo (self) %>" method="POST">
 <div class="minires_wrap">
 <table class="minres_form_table">
@@ -381,11 +382,6 @@ PMAX_H //高さ
 <input type="hidden" name="textonly" value="on"><% ========== ←v1.3b3以降必須 ========== %>
 <tr><td class="minres_title">名前<% def(usename) %>(必須)<% /def %></td><td><input type="text" name="name" class="minres_input_text" autocomplete="username"></td>
 <td class="minres_title">題名<% def(usesub) %>(必須)<% /def %></td><td><input type="text" name="sub" value="<% echo (oya/resub) %>" class="minres_input_text" autocomplete="off"></td>
-<% def(n) %>
-<!--
-// oya/resub…返信用題名(Re: ～)
--->
-<% /def %>
 </tr>
 <tr>
 <td class="minres_title">E-mail</td><td><input type="text" name="email" class="minres_input_text" autocomplete="email"></td>
@@ -400,6 +396,7 @@ PMAX_H //高さ
 </table>
 </div>
 </form>
+<% /def %>
 <% elsedef %>
 <% ========== ミニレスフォームを表示させない場合は返信ボタンを表示 ========== %>
 
@@ -415,9 +412,10 @@ PMAX_H //高さ
 	</span>
 	<% /def %>
 	<form action="<% echo (self) %>?res=<% echo (oya/no) %>" method="post"><input type="submit" value="返信" class="res_button"></form><span class="page_top"><a href="#top">△</a></span></div>
-<hr>
-<% /def %>
+	<% /def %>
+<% ========== 返信ボタンここまで ========== %>
 
+	<hr>
 
 </article>
 <% /each %>
