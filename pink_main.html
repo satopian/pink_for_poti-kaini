@@ -404,17 +404,16 @@ PMAX_H //高さ
 <% ========== ミニレスフォームを表示させない場合は返信ボタンを表示 ========== %>
 
 <div class="res_button_wrap">
-<% def(sharebutton) %>
-<span class="share_button">
+	<% def(sharebutton) %>
 	<span class="share_button">
-		<script>
-			(function(){
-				var url = encodeURIComponent('<% echo(rooturl) %><% echo(self) %>?res=<% echo(oya/no) %>'); //ページURL。一応エンコード
-				var title = encodeURIComponent('[<% echo(oya/no) %>] <% echo(oya/sub) %> by <% echo(oya/name) %> - <% echo(title %>'); //ページタイトル。同上。
-			document.write( '<a target="_blank" href="https://twitter.com/intent/tweet?&text=' + title + '&url=' + url + '"><span class="icon-twitter button"><i class="fab fa-twitter"></i> tweet</span></a> <a target="_blank" class="fb btn" href="http://www.facebook.com/share.php?u=' + url + '"><span class="icon-facebook2 button"><i class="fab fa-facebook-square"></i> share</span></a>' );})();
+	<script>
+		(function(){
+			var url = encodeURIComponent('<% echo(rooturl) %><% echo(self) %>?res=<% echo(oya/no) %>'); //ページURL。一応エンコード
+			var title = encodeURIComponent('[<% echo(oya/no) %>] <% echo(oya/sub) %> by <% echo(oya/name) %> - <% echo(title) %>'); //ページタイトル。同上。
+		document.write( '<a target="_blank" href="https://twitter.com/intent/tweet?&text=' + title + '&url=' + url + '"><span class="icon-twitter"></span>tweet</a> <a target="_blank" class="fb btn" href="http://www.facebook.com/share.php?u=' + url + '"><span class="icon-facebook2"></span>share</a>' );})();
 		</script>
-</span>
-<% /def %>
+	</span>
+	<% /def %>
 	<form action="<% echo (self) %>?res=<% echo (oya/no) %>" method="post"><input type="submit" value="返信" class="res_button"></form><span class="page_top"><a href="#top">△</a></span></div>
 <hr>
 <% /def %>
@@ -477,13 +476,12 @@ l(); //LoadCookie
 	OriginalScript - <a href="http://www.punyu.net/" target="_blank" rel="noopener noreferrer" title="POTI-board v1.32 (by ぷにゅねっと)">POTI-board</a>
 <a href="https://www.2chan.net/script/" target="_blank" rel="noopener noreferrer" title="futaba.php v0.8 lot.031015 (by ふたば)">futaba.php</a> <a href="http://php.loglog.jp/" target="_blank" rel="noopener noreferrer" title="gazou.php v3.0 (by レッツPHP!)">gazou.php</a><br>
 <% def(paint) %>
-OekakiApplet - <a href="http://hp.vector.co.jp/authors/VA016309/" target="_blank" rel="noopener noreferrer" title="by しぃちゃん">PaintBBS</a>
+OekakiApplet - <a href="http://hp.vector.co.jp/authors/VA016309/" target="_blank" rel="noopener noreferrer" title="by しぃちゃん">Shi-Painter</a>
 <br>
 <% /def %>
-UseFunction - <span title="HTMLテンプレート v1.3.2 (by PHP開発日誌)">HTMLテンプレート</span>
-<!--http://hoover.ktplan.ne.jp/kaihatsu/php/-->
-，<span title="by WonderCatStudio">動的パレットスクリプト</span>
+UseFunction - <span title="by WonderCatStudio">動的パレットスクリプト</span>
 <!--http://wondercatstudio.com/-->
+，<a href="http://skinny.sx68.net/" target="_blank" rel="noopener noreferrer" title="Skinny">Skinny</a>
 ，<a href="http://github.com/funige/neo/" target="_blank" rel="noopener noreferrer" title="by funige">PaintBBS NEO</a>
 </div>
 
