@@ -8,18 +8,19 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<% def(paint_mode) %>
+<!--{def paint_mode}-->
 <meta name="robots" content="noindex,follow">
-<% def(pinchin) %>
+<!--{def pinchin}-->
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<% elsedef %>
+<!--{/def}-->
+<!--{ndef pinchin}-->
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-<% /def %>
-<% /def %>
-<% def(pch_mode) %><meta name="viewport" content="width=device-width,initial-scale=1.0"><% /def %>
-<% def(continue_mode) %><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"><% /def %>
-<link rel="stylesheet" type="text/css" href="pink.css">
-<title><% def(paint_mode) %>お絵かきモード<% /def %><% def(continue_mode) %>続きを描く<% /def %><% def(pch_mode) %>動画表示モード<% /def %> - {$title}</title>
+<!--{/ndef}-->
+<!--{/def}-->
+<!--{def pch_mode}--><meta name="viewport" content="width=device-width,initial-scale=1.0"><!--{/def}-->
+<!--{def continue_mode}--><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"><!--{/def}-->
+<link rel="stylesheet" href="pink.css">
+<title><!--{def paint_mode}-->お絵かきモード<!--{/def}--><!--{def continue_mode}-->続きを描く<!--{/def}--><!--{def pch_mode}-->動画表示モード<!--{/def}--> - {$title}</title>
 <!--(
 // title…掲示板タイトル
 // charset…文字コード
@@ -35,43 +36,23 @@ document.paintBBSCallback = function (str) {
 	}
 	}
 </script>
-<% def(useneo) %>
+<!--{def paint_mode}-->
 <link rel="stylesheet" href="neo.css" type="text/css" />
 <script src="neo.js" charset="UTF-8"></script>
-<% /def %>
-<% def(paintbbs) %>
-<% def(pch_mode) %>
+<!--{/def}-->
+<!--{def paintbbs}-->
+<!--{def pch_mode}-->
 <link rel="stylesheet" href="neo.css" type="text/css" />
 <script src="neo.js" charset="UTF-8"></script>
-<% /def %>
-<% /def %>
-<% def(paintbbs) %>
-<% elsedef %>
-<!--( Javaが使えるかどうか判定 )-->
-<!--(
-<script>
-function cheerpJLoad() {
-var jEnabled = navigator.javaEnabled();
-if(!jEnabled){
-var sN = document.createElement("script");
-sN.src = "https://cjrtnc.leaningtech.com/20190103/loader.js";
-var s0 = document.getElementsByTagName("script")[0];
-s0.parentNode.insertBefore(sN, s0);
-sN.addEventListener("load", function(){ cheerpjInit(); }, false);
-}
-}
-window.addEventListener("load", function() { cheerpJLoad(); }, false);
-</script>
-)-->
-<% /def %>
+<!--{/def}-->
+<!--{/def}-->
 
 </head>
 <body>
 <header>
-<% def(paint_mode) %><h1 style= "min-width:calc({$w}px + 176px)" id="bbs_title">お絵かきモード</h1>
-<% elsedef %>
-<h1 id="bbs_title"><% def(continue_mode) %>続きを描く<% /def %><% def(pch_mode) %>動画表示モード<% /def %><% /def %></h1>
-<% def(paint_mode) %>
+<!--{def paint_mode}--><h1 style= "min-width:calc({$w}px + 176px)" id="bbs_title">お絵かきモード</h1><!--{/def}-->
+<!--{ndef paint_mode}--><h1 id="bbs_title"><!--{def continue_mode}-->続きを描く<!--{/def}--><!--{def pch_mode}-->動画表示モード<!--{/def}--></h1><!--{/ndef}-->
+
 <!--(========== お絵かきモード ==========
 // 【お絵かき(通常/続き)】
 //
@@ -123,15 +104,15 @@ window.addEventListener("load", function() { cheerpJLoad(); }, false);
 // ext…画像拡張子(コンティニュー)
 // mode2…現在のモード
 )-->
-<% def(paint_mode) %>
+<!--{def paint_mode}-->
 <nav>
 <div style= "min-width:calc({$w}px + 176px)" id="self2"> [<a href="{$self2}">{$title}</a>] 
-<% def(paintbbs) %>
+<!--{def paintbbs}-->
 <span class="nts_radiowrap">ツールを
 	<input type="radio" name="1" id="1" onclick="Neo.setToolSide(true)" class="nts_radio"><label class="ntslabel" for="1">左へ</label>
 	<input type="radio" name="1" id="2" onclick="Neo.setToolSide(false)" checked="checked" class="nts_radio"><label class="ntslabel" for="2">右へ</label>
 </span>
-	<% /def %>
+<!--{/def}-->
 </div>
 </nav>
 </header>
@@ -140,9 +121,9 @@ window.addEventListener("load", function() { cheerpJLoad(); }, false);
 var DynamicColor = 1;	// パレットリストに色表示
 var Palettes = new Array();
 <!--(========== パレット配列作成 ==========)-->
-<% def(palettes) %>
-<% echo(palettes) %>
-<% /def %>
+<!--{def palettes}--><!--{each palettes}-->
+{$palettes}
+<!--{/each}--><!--{/def}-->
 function setPalette(){d=document;d.paintbbs.setColors(Palettes[d.Palette.select.selectedIndex]);d.grad.view.checked&&GetPalette()}function PaletteSave(){Palettes[0]=String(document.paintbbs.getColors())}var cutomP=0;
 function PaletteNew(){d=document;p=String(d.paintbbs.getColors());s=d.Palette.select;Palettes[s.length]=p;cutomP++;str=prompt("パレット名","パレット "+cutomP);null==str||""==str?cutomP--:(s.options[s.length]=new Option(str),30>s.length&&(s.size=s.length),PaletteListSetColor())}function PaletteRenew(){d=document;Palettes[d.Palette.select.selectedIndex]=String(d.paintbbs.getColors());PaletteListSetColor()}
 function PaletteDel(){p=Palettes.length;s=document.Palette.select;i=s.selectedIndex;if(-1!=i&&(flag=confirm("「"+s.options[i].text + "」を削除してよろしいですか？"))){for(s.options[i]=null;p>i;)Palettes[i]=Palettes[i+1],i++;30>s.length&&(s.size=s.length)}}
@@ -167,15 +148,13 @@ pe[n]}}function GradView(a,f){d=document}function showHideLayer(){d=document;var
 <div class="appstage"><div class="app">
 <!--( <APPLET～</APPLET>の～部分の詳しい事は、PaintBBS及びしぃペインターのReadmeを参照 )-->
 <!--(========== PaintBBS個別設定 ==========)-->
-<% def(paintbbs) %>
+<!--{def paintbbs}-->
 <!-- NEOを使う時はアプレットを読み込まないように -->
-<% def(useneo) %><APPLET-DUMMY 
-	<% elsedef %><APPLET<% /def %>
-
+<APPLET-DUMMY
  CODE="pbbs.PaintBBS.class" ARCHIVE="./PaintBBS.jar" NAME="paintbbs" WIDTH="{$w}" HEIGHT="{$h}" MAYSCRIPT>
-<% /def %>
+<!--{/def}-->
 <!--(========== しぃペインター個別設定 ==========)-->
-<% def(normal) %>
+<!--{def normal}-->
 <applet code="c.ShiPainter.class" archive="spainter_all.jar" name="paintbbs" WIDTH="{$w}" HEIGHT="{$h}" MAYSCRIPT>
 <param name=dir_resource value="./">
 <param name="tt.zip" value="tt_def.zip">
@@ -183,22 +162,22 @@ pe[n]}}function GradView(a,f){d=document}function showHideLayer(){d=document;var
 <!--(しぃペインターv1.05_9以前を使うなら res_normal.zip に変更)-->
 <param name=tools value="normal">
 <param name=layer_count value="{$layer_count}">
-<% def(quality) %>
+<!--{def quality}-->
 <param name=quality value="{$quality}">
-<% /def %>
-<% /def %>
+<!--{/def}-->
+<!--{/def}-->
 <!--(========== しぃペインターPro個別設定 ==========)-->
-<% def(pro) %>
+<!--{def pro}-->
 <applet code="c.ShiPainter.class" archive="spainter_all.jar" name="paintbbs" WIDTH="{$w}" HEIGHT="{$h}" MAYSCRIPT>
 <param name=dir_resource value="./">
 <param name="tt.zip" value="tt_def.zip">
 <param name="res.zip" value="res.zip"><!--(しぃペインターv1.05_9以前を使うなら res_pro.zip に変更)-->
 <param name=tools value="pro">
 <param name=layer_count value="{$layer_count}">
-<% def(quality) %>
+<!--{def quality}-->
 <param name=quality value="{$quality}">
-<% /def %>
-<% /def %>
+<!--{/def}-->
+<!--{/def}-->
 <!--(========== 共通設定(変更不可) ==========)-->
 <param name="image_width" value="{$picw}">
 <param name="image_height" value="{$pich}">
@@ -214,36 +193,35 @@ pe[n]}}function GradView(a,f){d=document}function showHideLayer(){d=document;var
 <param name="thumbnail_height" value="100%">
 <param name="url_save" value="picpost.php">
 <param name="url_exit" value="{$self}?mode={$mode}&amp;stime={$stime}">
-<% def(anime) %>
+<!--{def anime}-->
 <param name="thumbnail_type" value="animation">
-<% /def %>
-<% def(pchfile) %>
+<!--{/def}-->
+<!--{def pchfile}-->
 <param name="pch_file" value="{$pchfile}">
-<% /def %>
-<% def(imgfile) %>
+<!--{/def}-->
+<!--{def imgfile}-->
 <param name="image_canvas" value="{$imgfile}">
-<% /def %>
-<% def(usercode) %>
+<!--{/def}-->
+<!--{def usercode}-->
 <param name="send_header" value="usercode={$usercode}">
-<% /def %>
-<% def(security) %>
-<% def(security_click) %>
+<!--{/def}-->
+<!--{def security}-->
+<!--{def security_click}-->
 <param name="security_click" value="{$security_click}">
-<% /def %>
-<% def(security_timer) %>
+<!--{/def}-->
+<!--{def security_timer}-->
 <param name="security_timer" value="{$security_timer}">
-<% /def %>
+<!--{/def}-->
 <param name="security_url" value="{$security_url}">
 <param name="security_post" value="false">
-<% /def %>
+<!--{/def}-->
 <!--(========== 共通設定(変更不可) ここまで ==========)-->
 <!--(========== アプレットのカラー設定(変更可) ==========)-->
 <!--(========== アプレットのカラー設定(変更可) ここまで ==========)-->
-<% def(cpal) %><% each(cpal) %>
+<!--{def cpal}--><!--{each cpal}-->
 <param name="color_{$cpal/no}" value="#{$cpal/pal}">
-<% /each %><% /def %>
-	<% def(useneo) %></APPLET-DUMMY>
-	<% elsedef %></APPLET><% /def %>
+<!--{/each}--><!--{/def}-->
+</APPLET-DUMMY>
 </div>
 <!--(========== 動的パレット制御関連 ==========)-->
 <div class="palette_wrap">
@@ -251,9 +229,9 @@ pe[n]}}function GradView(a,f){d=document}function showHideLayer(){d=document;var
 <span class="palette_desc">PALETTE</span> <INPUT type="button" VALUE="一時保存" OnClick="PaletteSave()"><br>
 <select name="select" size="{$palsize}" onChange="setPalette()" class="palette_select">
 <option>一時保存パレット</option>
-<% def(dynp) %>
-<% echo (dynp) %>
-<% /def %><% /def %>
+<!--{def dynp}--><!--{each dynp}-->
+<option>{$dynp}</option>
+<!--{/each}--><!--{/def}-->
 </select><br>
 <INPUT type="button" VALUE="作成" OnClick="PaletteNew()">
 <INPUT type="button" VALUE="変更" OnClick="PaletteRenew()">
@@ -326,15 +304,15 @@ timerID=10;stime=new Date;function SetTimeCount(){now=new Date;s=Math.floor((now
 </Script>
 </div>
 <!--(========== 描画時間動的表示 ここまで ==========)-->
-<p><% def(anime) %>★描画アニメ記録中★<% /def %></p>
+<p><!--{def anime}-->★描画アニメ記録中★<!--{/def}--></p>
 <!--(========== お絵かき設定値の再設定関連 ==========)-->
 <!--(========== お絵かき設定値の再設定関連 ここまで ==========)-->
-<a href="{$self}?mode=piccom<% def(resno) %>&resto={$resno}<% /def %>">アップロード途中の画像</a>
+<a href="{$self}?mode=piccom<!--{def resno}-->&amp;resto={$resno}<!--{/def}-->">アップロード途中の画像</a>
 </div>
 <!--PaintBBS HELP START-->
 <SIIHELP>
 <!--PaintBBS HELP END-->
-<% /def %>
+<!--{/def}-->
 <!--(========== お絵かきモード ここまで ==========)-->
 <!--(========== 動画表示モード ==========
 //
@@ -349,19 +327,19 @@ timerID=10;stime=new Date;function SetTimeCount(){now=new Date;s=Math.floor((now
 // speed…動画再生スピード初期値
 // datasize…動画ファイルサイズ(Byte)
 )-->
-<!--(<div id="mode_head">動画表示モード</div>)-->
-<% def(pch_mode) %>
+<!--{def pch_mode}-->
+<!--<div id="mode_head">動画表示モード</div>-->
 	</header>
 <div class="pch_animation">
-<% def(paintbbs) %>
+<!--{def paintbbs}-->
 <APPLET-DUMMY name="pch" code="pch.PCHViewer.class" archive="PCHViewer.jar,PaintBBS.jar" width="{$w}" height="{$h}" MAYSCRIPT>
-<% /def %>
-<% def(normal) %>
+<!--{/def}-->
+<!--{def normal}-->
 <APPLET name="pch" code="pch2.PCHViewer.class" archive="PCHViewer.jar,spainter_all.jar" codebase="./" width="{$w}" height="{$h}">
 <param name="res.zip" value="res.zip"><!--(しぃペインターv1.05_9以前を使うなら res_normal.zip に変更)-->
 <param name="tt.zip" value="tt_def.zip">
 <param name="tt_size" value="31">
-<% /def %>
+<!--{/def}-->
 <param name="image_width" value="{$picw}">
 <param name="image_height" value="{$pich}">
 <param name="pch_file" value="{$pchfile}">
@@ -383,7 +361,7 @@ timerID=10;stime=new Date;function SetTimeCount(){now=new Date;s=Math.floor((now
 <small>Datasize : {$datasize} byte</small><br>
 	<a href="{$self2}">{$title}</a> / <a href="javascript:close()">閉じる</a>
 </div>
-<% /def %>
+<!--{/def}-->
 <!--(========== 動画表示モード ここまで ==========)-->
 <!--(========== コンティニューモード ==========
 //
@@ -404,23 +382,26 @@ timerID=10;stime=new Date;function SetTimeCount(){now=new Date;s=Math.floor((now
 // usepbbs…しぃペインターとPaintBBSの両方が使用できるとき true が入る
 // palette…パレット選択用データ(selectタグ用option配列)
 // passflag…削除キー入力を促す場合 true が入る
+// newpost_nopassword…新規投稿で削除キー不要の時 true  が入る
 )-->
-<% def(continue_mode) %>
+<!--{def continue_mode}-->
 <nav>
 <div id="self2"> 
 [<a href="{$self2}">{$title}</a>]
-</div>
+ </div>
 </nav>
 </header>
- 	<div class="centering">
+
+
+  <div class="centering">
     <!--(========== クッキー読込み用JavaScript(必須) ==========)-->
     <Script language="JavaScript" src="loadcookie.js"></script>
     <!--(========== 画像と描画時間 ==========)-->
- 	<div class="continue_img"><a href="{$self}?res={$no}">
+	<div class="continue_img"><a href="{$self}?res={$no}">
 <img src="{$picfile}" width="{$picw}" height="{$pich}" alt="{$picw}x{$pich} {$title}" title="{$picw}x{$pich} {$title}">
 </a>
-   </div>
-    <div class="continue_painttime"><% def(painttime) %>描画時間：{$painttime}<% /def %></div>
+	</div>
+        <div class="continue_painttime"><!--{def painttime}-->描画時間：{$painttime}<!--{/def}--></div>
     <!--(========== コンティニューフォーム欄 ==========)-->
     <form action="{$self}" method="post">
       <input type="hidden" name="mode" value="contpaint">
@@ -432,70 +413,62 @@ timerID=10;stime=new Date;function SetTimeCount(){now=new Date;s=Math.floor((now
       <input type="hidden" name="ext" value="{$ext}">
       <span class="nk">
       <select name="ctype" class="paint_select">
-        <% def(ctype_pch) %><option value="pch">動画より続きを描く</option><% /def %>
-        <% def(ctype_img) %><option value="img">画像より続きを描く</option><% /def %>
+        <!--{def ctype_pch}--><option value="pch">動画より続きを描く</option><!--{/def}-->
+        <!--{def ctype_img}--><option value="img">画像より続きを描く</option><!--{/def}-->
       </select>
-      画像は <select name="type" class="paint_select">
+      画像は<select name="type" class="paint_select">
 	<option value="rep">差し換え</option>
 	<option value="new">新規投稿</option>
        </select>
        </span>
       <br>
-<!--(//コメントアウト
+<!--(
 {def applet}
-アプレット<select name="shi" class="paint_select">
-{def usepbbs}
-<option value="0">PaintBBS</option>
-{/def}
-<option value=1>しぃペインター</option>
-<option value=2>しぃペインターPro</option> 
+アプレット
+<select name="shi" class="paint_select">
+  {def usepbbs}
+  <option value="0">PaintBBS</option>
+  {/def}
+  <option value=1>しぃペインター</option>
+  <option value=2>しぃペインターPro</option>
 </select>
 {/def}
 )-->
-<span class="nk">削除キー<input type="password" name="pwd" size="8" value="" class="paint_password" autocomplete="current-password"></span>
-<!-- NEOを使う -->
-<% def(ctype_pch) %>
-<% elsedef %>
-<label><input type="checkbox" name="useneo" checked="checked" /><span class="use_neo">NEOを使う</span></label>
-<% /def %>
+<span class="nk">削除キー
+<input type="password" name="pwd" size="8" value="" class="paint_password" autocomplete="current-password">
+</span>
 <input type="submit" value="続きを描く">
-
-<% def(applet) %>
-<input type="hidden" name="shi" value="1">
-<% elsedef %>
-<input type="hidden" name="useneo" value="1">
-<% /def %>
-
 </form>
+
     <!--(========== コンティニュー説明 ==========)-->
-    <div class="howtocontinue">
-           <ul id="up_desc">
-    <% def(newpost_nopassword) %>
+      <div class="howtocontinue">
+      <ul>
+
+    <!--{def passflag}-->
+    <!--{def newpost_nopassword}-->
 	<li>新規投稿なら削除キーがなくても続きを描く事ができます。</li>
-    <% elsedef %>
+    <!--{/def}-->
+    <!--{ndef newpost_nopassword}-->
 	<li>続きを描くには描いたときの削除キーが必要です。</li>
-    <% /def %>
-<!--({$addinfo})-->
+    <!--{/ndef}-->
+    <!--{/def}-->
+        {$addinfo}
         </ul>
-    </div>
+        </div>
     <!--(========== JavaScriptの実行(クッキーを読込み、フォームに値をセット) ==========)-->
     <script language="JavaScript"><!--
 l(); //LoadCookie
 //--></script>
   </div>
-  <% /def %>
+  <!--{/def}-->
   <!--(========== コンティニューモード ここまで ==========)--><!--著作権表示 削除しないでください-->
 <footer>
 <div class="copyright">
 <!-- GazouBBS v3.0 --><!-- ふたば改0.8 --><!-- POTI-board -->
 <a href="https://poti-k.info/" target="_blank" rel="noopener noreferrer" title="POTI-board {$verlot} (by 赤原文庫)"><b>POTI-board {$ver}</b></a>
-<span class="webstyle_wrap">Web Style by <a href="https://draclaw.com/" target="_blank" rel="noopener noreferrer" title="Cool Solid (by ドラ☆クロウ！)"><b>Cool Solid</b></a> &amp; <a href="http://stp.sblo.jp/article/182310034.html" target="_blank" rel="noopener noreferrer" title="PINK {$tver} (by さとぴあ)"><b>PINK</b></a></span><br>
+	<span class="webstyle_wrap">Web Style by <a href="https://draclaw.com/" target="_blank" rel="noopener noreferrer" title="Cool Solid (by ドラ☆クロウ！)"><b>Cool Solid</b></a> &amp; <a href="http://stp.sblo.jp/article/182310034.html" target="_blank" rel="noopener noreferrer" title="PINK {$tver} (by さとぴあ)"><b>PINK</b></a></span><br>
 OriginalScript - <a href="http://www.punyu.net/" target="_blank" rel="noopener noreferrer" title="POTI-board v1.32 (by ぷにゅねっと)">POTI-board</a>
-<a href="https://www.2chan.net/script/" target="_blank" rel="noopener noreferrer  nofollow" title="futaba.php v0.8 lot.031015 (by ふたば)">futaba.php</a> <a href="http://php.loglog.jp/" target="_blank" rel="noopener noreferrer" title="gazou.php v3.0 (by レッツPHP!)">gazou.php</a><br>
-<% def(paint) %>
-OekakiApplet - <a href="http://hp.vector.co.jp/authors/VA016309/" target="_blank" rel="noopener noreferrer" title="by しぃちゃん">PaintBBS</a>
-<br>
-<% /def %>
+<a href="https://www.2chan.net/script/" target="_blank" rel="noopener noreferrer" title="futaba.php v0.8 lot.031015 (by ふたば)">futaba.php</a> <a href="http://php.loglog.jp/" target="_blank" rel="noopener noreferrer" title="gazou.php v3.0 (by レッツPHP!)">gazou.php</a><br>
 UseFunction - <span title="HTMLテンプレート v1.3.2 (by PHP開発日誌)">HTMLテンプレート</span>
 <!--http://hoover.ktplan.ne.jp/kaihatsu/php/-->
 ，<span title="by WonderCatStudio">動的パレットスクリプト</span>
