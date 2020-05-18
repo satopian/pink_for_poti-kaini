@@ -895,9 +895,9 @@ a:hover {
 }
 
 /* スマートフォンには表示しない */
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 767px) {
 
-	/* 555px以下の幅の場合に適用される */
+	/* 767px以下の幅の場合に適用される */
 	#res_paint_form,
 	.howtopaint,
 	.txtnon,
@@ -931,11 +931,6 @@ a:hover {
 	color: gray;
 }
 
-.potitag_mode {
-	width: 96%;
-	margin-right: auto;
-	margin-left: auto;
-}
 
 /* ペイントボタン */
 .paint_button {

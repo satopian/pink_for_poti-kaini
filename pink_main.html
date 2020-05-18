@@ -128,9 +128,6 @@ PMAX_H //高さ
 <ul id="up_desc">
 <li>お絵かきできる画像のサイズは横 300～<% echo (pmaxw) %>、縦 300～<% echo (pmaxh) %>の範囲内です。</li>
 <li>画像は横 <% echo (maxw) %>ピクセル、縦 <% echo (maxh) %>ピクセルを超えると縮小表示されます。sage機能付き。</li>
-<% def(potitag) %>
-<li>独自タグが使用できます … <a href="<% echo (self) %>?mode=tag" target="_blank" rel="noopener noreferrer">独自タグ説明</a></li>
-<% /def %>
 <% echo (addinfo) %>
 </ul>
 </div>
@@ -141,7 +138,6 @@ PMAX_H //高さ
   // pmaxh…お絵かき最大サイズ(縦)
   // maxw…投稿サイズ(横)。レス時にはレス用の値が入る
   // maxh…投稿サイズ(縦)。レス時にはレス用の値が入る
-  // potitag…独自タグ機能を使用するとき true が入る
   // addinfo…追加お知らせ
   -->
   <% /def %>
@@ -218,9 +214,6 @@ PMAX_H //高さ
 	<li>画像は横 <% echo (maxw) %>ピクセル、縦 <% echo (maxh) %>ピクセルを超えると縮小表示されます。</li>
 	<% /def %>
 	<li>最大投稿データ量は <% echo (maxkb) %> KB までです。sageるときはE-mail欄にsageを入れてね。</li>
-	<% def(potitag) %>
-	<li>独自タグが使用できます … <a href="<% echo (self) %>?mode=tag" target="_blank" rel="noopener">独自タグ説明</a></li>
-	<% /def %>
 	<% echo (addinfo) %>
 	</ul>
 	</div>
