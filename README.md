@@ -13,7 +13,7 @@
 
 ## サポート
 
-[POTI改公式サイト](https://poti-k.info/)に設置サポート掲示板がありますので質問がありましたらこちらまで。
+[POTI改公式サイト](https://poti-k.info/)に設置サポート掲示板で質問を受け付けています。
 GitHubの[Issues](https://github.com/satopian/pink_for_pot-kaini/issues)でも対応できると思います。
 
 ### 設置サンプル
