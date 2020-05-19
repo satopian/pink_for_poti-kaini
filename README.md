@@ -2,7 +2,7 @@
 
 ## 2020年に始動したPOTI-board改二用 のテンプレートです。
 
-**POTI-board改用はこちら(https://github.com/satopian/pink)**
+POTI-board改用はこちら(https://github.com/satopian/pink)
 
 **POTI-board改とPOTI-board改二のテンプレートは互換性がありません。**
 
