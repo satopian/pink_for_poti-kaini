@@ -1,6 +1,6 @@
-# POTI-board用テンプレートPINK (改二専用）
+# POTI-board用テンプレートPINK (改二版）
 
-## 2020年に始動したPOTI-board改二用 のテンプレートです。
+## 2020年に始動したPOTI-board改二用のテンプレートです。
 
 **[POTI-board改用はこちら](https://github.com/satopian/pink)**
 
@@ -10,6 +10,11 @@
 
 今後のスクリプトの保守は改二に移行する予定です。
 新規設置を検討されている方は、より高速に動作する[POTI-board改二](https://github.com/sakots/poti-kaini)の利用をご検討ください。
+
+## サポート
+
+[POTI改公式サイト](https://poti-k.info/)に設置サポート掲示板がありますので質問がありましたらこちらまで。
+GitHubの[Issues](https://github.com/satopian/pink_for_pot-kaini/issues)でも対応できると思います。
 
 ### 設置サンプル
 
@@ -37,7 +42,7 @@ BBSNoteのようなレイアウト。
 
 **緑色の「Clone or download」ボタンを押下してpink_for_pot-kaini-master.zipを入手します。**
 
-## 設置方法
+## サーバへの転送
 
 > //スキンのディレクトリ。'/'まで
 > //skinディレクトリに使いたいtemplateをいれて使ってください。(推奨)
@@ -69,6 +74,10 @@ config.phpを編集します。
 
 と設定したので、 pink/ ディレクトリのテンプレートが適用されます。
 
+pinkディレクトリを転送します。
+
 掲示板が表示されたら設置完了です。
 
 このテンプレートを使う前に、掲示板が動作することを確認することをおすすめします。
+
+テンプレートを変更しても表示が変わらない時は、管理画面からログ更新するか、なんでもいいので書き込みます。
