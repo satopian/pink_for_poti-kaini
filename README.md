@@ -4,7 +4,7 @@
 
 **[POTI-board改用はこちら](https://github.com/satopian/pink)**
 
-**POTI-board改とPOTI-board改二のテンプレートは互換性がありません。**
+**「POTI-board改」と「POTI-board改二」のテンプレートは互換性がありません。**
 
 間違えると掲示板が動作しなくなりますので注意が必要です。
 
