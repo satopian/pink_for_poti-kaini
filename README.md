@@ -1,6 +1,6 @@
 # POTI-board用テンプレートPINK 改二
 
-[POTI-board改二](https://github.com/sakots/poti-kaini)専用のテンプレートです。
+**[POTI-board改二](https://github.com/sakots/poti-kaini)専用のテンプレートです。**
 
 **[POTI-board改用はこちら](https://github.com/satopian/pink)**
 
