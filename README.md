@@ -1,12 +1,19 @@
 # POTI-board用テンプレートPINK (改二専用）
 
-[お絵かき掲示板](https://pbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしたものです。
+### 2020年に始動したPOTI-board改二用 のテンプレートです。
+
+**POTI-board改用はこちら(https://github.com/satopian/pink)**
+
+見た目や機能は同じですが、内部のテンプレートエンジンがskinnyに変更されたため互換性がありません。
+POTI-board改とPOTI-board改二で使用するテンプレートが違います。
+**間違えると掲示板が動作しなくなります**のでよろしくお願いいたします。
 
 ### 設置サンプル
 
 [POTI-board用テンプレート PINK 設置サンプル](https://pbbs.sakura.ne.jp/cgi/neosample/poti/)
 
 ### 特徴
+[お絵かき掲示板](https://pbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしました。
 
 [POTI-board用テンプレート PINK を配布します。: STP^3](http://stp.sblo.jp/article/182310034.html)
 
@@ -26,6 +33,8 @@ BBSNoteのようなレイアウト。
 
 **緑色の「Clone or download」ボタンを押下してpink-master.zipを入手します。**
 
+## 設置方法
+
 > //スキンのディレクトリ。'/'まで
 > //skinディレクトリに使いたいtemplateをいれて使ってください。(推奨)
 > //別のディレクトリにしたい場合は設定してください。
@@ -39,7 +48,4 @@ config.phpを編集します。
 
 > define('SKIN_DIR', 'pink/');
 >//最後に / が必要
-
-
-
 
