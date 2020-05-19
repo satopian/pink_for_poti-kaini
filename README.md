@@ -6,14 +6,18 @@
 
 **POTI-board改とPOTI-board改二のテンプレートは互換性がありません。**
 
-**間違えると掲示板が動作しなくなります**のでよろしくお願いいたします。
+**間違えると掲示板が動作しなくなります**ので注意が必要です。
+
+今後のスクリプトの保守は、改二に移行する予定です。
+新規設置を検討されている方は、より高速に動作する[POTI-board改二](https://github.com/sakots/poti-kaini)の利用をご検討ください。
 
 ### 設置サンプル
 
 [POTI-board用テンプレート PINK 設置サンプル](https://pbbs.sakura.ne.jp/cgi/neosample/poti/)
 
 ### 特徴
-[お絵かき掲示板](https://pbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしました。
+
+[お絵かき掲示板](https://pbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしたものです。
 
 [POTI-board用テンプレート PINK を配布します。: STP^3](http://stp.sblo.jp/article/182310034.html)
 
@@ -47,5 +51,8 @@ config.phpを編集します。
 例えば
 
 > define('SKIN_DIR', 'pink/');
->//最後に / が必要
+
+の場合。
+
+
 
