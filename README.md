@@ -1,6 +1,4 @@
-# POTI-board用テンプレートPINK (改二版）
-
-## POTI-board改二専用のテンプレートです。
+# POTI-board用テンプレートPINK for POTI-board改二
 
 **[POTI-board改用はこちら](https://github.com/satopian/pink)**
 
