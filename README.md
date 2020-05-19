@@ -55,10 +55,12 @@ config.phpを編集します。
 の場合。
 
 ![Screen-2020-05-19_22-36-50](https://user-images.githubusercontent.com/44894014/82336088-1e3cf400-9a25-11ea-8ff6-8a071209e13f.png)
+
 ↑
 ダウンロードしたpotiboard2フォルダに、pinkという新しいフォルダを追加します。
 
 ![Screen-2020-05-19_22-38-02](https://user-images.githubusercontent.com/44894014/82336104-22691180-9a25-11ea-939c-543567e6b657.png)
+
 ↑
 その中にここからダウンロードしたファイルまとめます。
 
