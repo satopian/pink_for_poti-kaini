@@ -54,12 +54,12 @@ config.phpを編集します。
 
 の場合。
 
-![Screen-2020-05-19_22-36-50](https://user-images.githubusercontent.com/44894014/82336088-1e3cf400-9a25-11ea-8ff6-8a071209e13f.png)
+![Screen-2020-05-19_23-14-36](https://user-images.githubusercontent.com/44894014/82337569-e33bc000-9a26-11ea-8a8d-d00a4f08c238.png)
 
 ↑
 ダウンロードしたpotiboard2フォルダに、pinkという新しいフォルダを追加します。
 
-![Screen-2020-05-19_22-38-02](https://user-images.githubusercontent.com/44894014/82336104-22691180-9a25-11ea-939c-543567e6b657.png)
+![Screen-2020-05-19_23-14-45](https://user-images.githubusercontent.com/44894014/82337582-e8007400-9a26-11ea-9829-a32683e7622a.png)
 
 ↑
 その中にここからダウンロードしたファイルまとめます。
@@ -67,13 +67,10 @@ config.phpを編集します。
 
 > define('SKIN_DIR', 'pink/');
 
-で、テンプレートのディレクトリは
-
->'pink/'
-
-と指定したので、そのディレクトリのテンプレートが適用されます。
+と設定したので、 pink/ ディレクトリのテンプレートが適用されます。
 
 掲示板が表示されたら設置完了です。
 
 このテンプレートを使う前に、掲示板が動作することを確認することをおすすめします。
+
 細かく設定してから動かそうと思ったら動かなかった…事が多いようです。
