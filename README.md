@@ -68,7 +68,7 @@ config.phpを編集します。
 ![Screen-2020-05-19_23-14-45](https://user-images.githubusercontent.com/44894014/82337582-e8007400-9a26-11ea-9829-a32683e7622a.png)
 
 ↑
-その中にここからダウンロードしたファイルまとめます。
+その中にここからダウンロードしたファイルをまとめます。
 
 
 > define('SKIN_DIR', 'pink/');
