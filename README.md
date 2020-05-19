@@ -1,6 +1,6 @@
 # POTI-board用テンプレートPINK (改二版）
 
-## 2020年に始動したPOTI-board改二用のテンプレートです。
+## 2020年に始動したPOTI-board改二専用テンプレートです。
 
 **[POTI-board改用はこちら](https://github.com/satopian/pink)**
 
