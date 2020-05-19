@@ -1,11 +1,11 @@
 # POTI-board用テンプレートPINK (改二専用）
 
-### 2020年に始動したPOTI-board改二用 のテンプレートです。
+## 2020年に始動したPOTI-board改二用 のテンプレートです。
 
 **POTI-board改用はこちら(https://github.com/satopian/pink)**
 
-見た目や機能は同じですが、内部のテンプレートエンジンがskinnyに変更されたため互換性がありません。
-POTI-board改とPOTI-board改二で使用するテンプレートが違います。
+**POTI-board改とPOTI-board改二のテンプレートは互換性がありません。**
+
 **間違えると掲示板が動作しなくなります**のでよろしくお願いいたします。
 
 ### 設置サンプル
