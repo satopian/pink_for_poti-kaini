@@ -184,6 +184,12 @@
 <div class="clear"></div>
 <div class="margin_resbutton_res">
 <div class="res_button_wrap">
+	<% def(form) %>
+	<% def(resname) %>
+	<!--(コピー対象要素とコピーボタン)--><input class="copy_txt" id="t" type="text" value="<% echo(resname) %>さん" readonly><button class="copy_button" onclick="c()">投稿者名をコピー</button><script>function c(){var copyTarget;document.getElementById("t").select(),document.execCommand("Copy")}</script>
+	<% /def %>
+	<% /def %>
+	
 <% def(sharebutton) %>
 	<span class="share_button">
 	<script>

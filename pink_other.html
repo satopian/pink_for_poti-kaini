@@ -1,11 +1,12 @@
-<!--(********** その他テンプレート **********
+<% def(n) %>
+<!--********** その他テンプレート **********
 // このテンプレートは、以下のモード用テンプレートです
 // ・投稿モード
 // ・管理モード(認証)モード
 // ・管理モード(削除)モード
 // ・エラーモード
-// ・独自タグ説明モード
-)-->
+-->
+<% /def %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -13,16 +14,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" href="<% echo(skindir) %>pink.css">
 <title><% def(post_mode) %><% def(rewrite) %><% elsedef %><% def(admin_del) %><% elsedef %><% def(admin) %><% elsedef %>投稿フォーム<% /def %><% /def %><% /def %><% /def %><% def(rewrite) %>編集モード<% /def %><% def(admin_in) %>管理用<% /def %><% def(admin) %><% def(rewrite) %> - <% /def %><% /def %><% def(admin) %> 管理人による投稿<% /def %><% def(admin_del) %>記事削除<% /def %><% def(err_mode) %>エラー！<% /def %> - <% echo(title) %></title>
-<!--(
+<% def(n) %>
+<!-- 
 // title…掲示板タイトル
 // charset…文字コード
-)-->
+-->
+<% /def %>
 </head>
 <body>
 <div id="body">
 <header>
 <h1 id="bbs_title"><% def(post_mode) %><% def(rewrite) %><% elsedef %><% def(admin_del) %><% elsedef %><% def(admin) %><% elsedef %>投稿フォーム<% /def %><% /def %><% /def %><% /def %><% def(rewrite) %>編集モード<% /def %><% def(admin_in) %>管理用<% /def %><% def(admin) %><% def(rewrite) %> - <% /def %><% /def %><% def(admin) %> 管理人による投稿<% /def %><% def(admin_del) %>記事削除<% /def %><% def(err_mode) %>エラー！<% /def %> - <% echo(title) %></h1>
-<!--(========== 投稿モード ==========
+<% def(n) %>
+<!-- 
+投稿モード
 // 【新規投稿、お絵かき投稿、編集】
 //
 // post_mode…投稿モードのとき true が入る
@@ -56,9 +61,10 @@
 // fctable/color…色コードまたは色名
 // fctable/chk…編集時、指定文字色なら true が入る
 // upfile…添付ファイル入力フォームを表示させたいとき true が入る
-)-->
+-->
+<% /def %>
 <% def(post_mode) %>
-<!--(========== クッキー読込みは新規投稿のみ ==========)-->
+<% ========== クッキー読込みは新規投稿のみ ========== %>
 <% def(regist) %>
 <script type="text/javascript" src="loadcookie.js"></script>
 <% /def %>
@@ -73,8 +79,10 @@
 
 <input name="submit" type="submit" value="PAINT" class="paint_button">
 <input type="hidden" name="shi" value="1">
-<!--(===キャンバスサイズ 設定はconfig.phpで ===)-->
-<!--(
+<% ===キャンバスサイズ 設定はconfig.phpで === %>
+<% def(n) %>
+<!-- 
+
 config.phpで設定した
 //お絵描きデフォルトサイズ(最初に選択される数値)
 PDEF_W //幅
@@ -83,7 +91,8 @@ PDEF_H// 高さ
 PMAX_W //幅
 PMAX_H //高さ
 が入ります。
-)-->
+-->
+<% /def %>
 <span class="canvas_size">Size</span>：<select name="picw" title="幅" class="canvas_select">
 	<?php
 	//幅 300から、PMAX_W で設定した最大値まで。
@@ -111,7 +120,7 @@ PMAX_H //高さ
 		}
 	?>
 	</select>&nbsp;
-<!--(===キャンバスサイズ ここまで ===)-->
+<% ===キャンバスサイズ ここまで === %>
 <span class="neo_checknon">
 <label class="checkbox"><input type="checkbox" name="useneo" checked="checked" /><span class="use_neo">NEOを使う</span></label>
 	</span>
@@ -124,7 +133,7 @@ PMAX_H //高さ
 
 <div class="centering">タグがつかえます</div>
 <% /def %>
-<!--(========== 投稿待ちのお絵かき画像表示 ==========)-->
+<% ========== 投稿待ちのお絵かき画像表示 ========== %>
 <% def(pictmp) %>
 <div class="centering">
 <% def(notmp) %>
@@ -145,11 +154,11 @@ PMAX_H //高さ
 </div>
 <% /def %>
 <form action="<% echo(self) %>" method="POST" enctype="multipart/form-data">
-<!--(========== モード指定:新規投稿 ==========)-->
+<% ========== モード指定:新規投稿 ========== %>
 <% def(regist) %>
 <input type="hidden" name="mode" value="regist">
 <% /def %>
-<!--(========== モード指定:編集 ==========)-->
+<% ========== モード指定:編集 ========== %>
 <% def(rewrite) %>
 <input type="hidden" name="mode" value="rewrite">
 <input type="hidden" name="no" value="<% echo(rewrite) %>">
@@ -164,7 +173,7 @@ PMAX_H //高さ
 <% def(ptime) %>
 <input type="hidden" name="ptime" value="<% echo(ptime) %>">
 <% /def %>
-<!--(========== レスお絵かき対応 ==========)-->
+<% ========== レスお絵かき対応 ========== %>
 <% def(resno) %>
 <input type="hidden" name="resto" value="<% echo(resno) %>">
 <% /def %>
@@ -173,31 +182,31 @@ PMAX_H //高さ
 <% def(ipcheck) %> <tr><td colspan="2" style="text-align: center;" class="post_table_submit td_noborder">- IPアドレスチェック中 -</td></tr><% /def %>
  <tr>
   <td class="post_table_title">名前<% def(usename) %>(必須)<% /def %></td>
-<!--(========== 編集時、valueに名前をセット ==========)-->
+<% ========== 編集時、valueに名前をセット ========== %>
   <td><input type="text" name="name" <% def(name) %> value="<% echo(name) %>"<% /def %> class="post_input_text" autocomplete="username"></td>
  </tr>
  <tr>
   <td class="post_table_title">E-mail</td>
-<!--(========== 編集時、valueにメールアドレスをセット ==========)-->
+<% ========== 編集時、valueにメールアドレスをセット ========== %>
   <td><input type="text" name="email" <% def(email) %> value="<% echo(email) %>"<% /def %> class="post_input_text" autocomplete="email"></td>
  </tr>
  <tr>
   <td class="post_table_title">URL</td>
-<!--(========== 編集時、valueにURLをセット ==========)-->
+<% ========== 編集時、valueにURLをセット ========== %>
   <td><input type="url" name="url" <% def(url) %> value="<% echo(url) %>"<% /def %> class="post_input_text" autocomplete="url"></td>
  </tr>
  <tr>
   <td class="post_table_title">題名<% def(usesub) %>(必須)<% /def %></td>
-<!--(========== 編集時、valueに題名をセット ==========)-->
+<% ========== 編集時、valueに題名をセット ========== %>
   <td><input type="text" name="sub" <% def(sub) %> value="<% echo(sub) %>"<% /def %> class="post_input_text" autocomplete="off"
 ></td>
  </tr>
  <tr>
   <td class="post_table_title">本文<% def(usecom) %>(必須)<% /def %></td>
-<!--(========== 編集時、textarea内に本文をセット ==========)-->
+<% ========== 編集時、textarea内に本文をセット ========== %>
   <td><textarea name="com" wrap="soft" class="post_input_com"><% def(com) %><% echo(com) %><% /def %></textarea></td>
  </tr>
-<!--(========== ファイルアップロード欄 ==========)-->
+<% ========== ファイルアップロード欄 ========== %>
 <% def(upfile) %>
  <% def(admin) %><tr>
 
@@ -205,7 +214,7 @@ PMAX_H //高さ
   <td><input type="file" name="upfile"><label class="checkbox"> <input type="checkbox" name="textonly" value="on">画像なし</label></td>
  </tr><% /def %>
 <% /def %>
-<!--(========== お絵かき画像選択欄 ==========)-->
+<% ========== お絵かき画像選択欄 ========== %>
 <% def(tmp) %>
  <tr>
   <td class="post_table_title">画像</td>
@@ -214,7 +223,7 @@ PMAX_H //高さ
   </select></td>
  </tr>
 <% /def %>
-<!--(========== 新規投稿時は削除キー入力 ==========)-->
+<% ========== 新規投稿時は削除キー入力 ========== %>
 <% def(regist) %>
  <tr>
   <td class="post_table_title">削除キー</td>
@@ -224,7 +233,7 @@ PMAX_H //高さ
  <tr><td colspan="2" style="text-align: center;" class="post_table_submit td_noborder"><input type="submit" value="送信する" class="post_submit"></td></tr>
  <tr>
   <td colspan="2" class="td_noborder">
-<!--(========== 新規投稿説明 ==========)-->
+<% ========== 新規投稿説明 ========== %>
 <ul class="howtowrite">
 <% def(regist) %>
 <% def(admin) %>
@@ -233,33 +242,36 @@ PMAX_H //高さ
 <li>最大投稿データ量は <% echo(maxkb) %> KB までです。sage機能付き。</li>
 <% /def %>
 <% /def %>
-<!--(========== 編集説明 ==========)-->
+<% ========== 編集説明 ========== %>
 <% def(rewrite) %>
 <li>E-mail以外の項目は 未入力(空白)にすると内容はそのままです。</li>
 <li>編集では クッキーは保存されません。さらにsageを入れても位置は変わりません。</li>
 <li>トリップは 再生成されるので、名前を変更しない場合は 未入力(空白)にしてください。</li>
 <% /def %>
-<!--(========== 以下共通 ==========)-->
+<% ========== 以下共通 ========== %>
 <% echo(addinfo) %>
 </ul></td>
  </tr>
 </table>
 </form>
-<!--(========== 新規投稿のみクッキーを読込み ==========)-->
+<% ========== 新規投稿のみクッキーを読込み ========== %>
 <% def(regist) %>
 <script type="text/javascript"><!--
 l(); //LoadCookie
 //--></script>
 <% /def %>
 <% /def %>
-<!--(========== 投稿モード ここまで ==========)-->
-<!--(========== 管理モード(認証) ==========
+<% ========== 投稿モード ここまで ========== %>
+<% def(n) %>
+<!-- 
+管理モード(認証) 
 //
 // admin_in…管理モード(認証)のとき true が入る
 // home…ホームページURL
 // self…POTI-boardのスクリプト名
 // self2…入口(TOP)ページのURL
-)-->
+-->
+<% /def %>
 <% def(admin_in) %>
 <div id="self2">
     [<a href="<% echo(self2) %>"><% echo(title) %></a>]</div>
@@ -278,8 +290,10 @@ l(); //LoadCookie
 </div>
 </form>
 <% /def %>
-<!--(========== 管理モード(認証) ここまで ==========)-->
-<!--(========== 管理モード(削除) ==========
+<% ========== 管理モード(認証) ここまで ========== %>
+<% def(n) %>
+<!-- 
+管理モード(削除)
 //
 // admin_del…管理モード(削除)のとき true が入る
 // home…ホームページURL
@@ -298,7 +312,8 @@ l(); //LoadCookie
 // del/size…画像サイズ(Byte)
 // del/chk…画像MD5
 // all…画像データ合計サイズ(KB)
-)-->
+-->
+<% /def %>
 <% def(admin_del) %>
 <div id="self2">
     [<a href="<% echo(self2) %>"><% echo(title) %></a>] </div>
@@ -365,15 +380,18 @@ l(); //LoadCookie
 <p>【 画像データ合計 : <b><% echo(all) %></b> KB 】</p>
   </div>
 <% /def %>
-<!--(========== 管理モード(削除) ここまで ==========)-->
-<!--(========== エラー画面 ==========
+<% ========== 管理モード(削除) ここまで ========== %>
+<% def(n) %>
+<!-- 
+エラー画面
 //
 // err_mode…エラー画面のとき true が入る
 // home…ホームページURL
 // self…POTI-boardのスクリプト名
 // self2…入口(TOP)ページのURL
 // mes…エラーメッセージ
-)-->
+-->
+<% /def %>
 <% def(err_mode) %>
 
 <div id="self2">
@@ -386,7 +404,7 @@ l(); //LoadCookie
 </div>
 
 <% /def %>
-<!--(========== エラー画面 ここまで ==========)-->
+<% ========== エラー画面 ここまで ========== %>
 <!--著作権表示 削除しないでください-->
 <footer>
 <div class="copyright">

@@ -1015,3 +1015,30 @@ input[type=radio]:checked+label {
 	display: inline-block;
 	margin: 0 0 5px 0;
 }
+/* 投稿者名をコピー */
+input.copy_txt {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: #ffd7f0;
+	width: 1px;
+	color: #ffd7f0
+}
+
+button.copy_button {
+	border: 1px solid #dcb5cd;
+	color: #686868;
+	background-color: #ffd7f0;
+	padding: 3px 5px;
+	border-radius: 5px;
+	margin: 0 3px 0 -2px
+}
+
+button.copy_button:hover {
+	background-color: #ffe4f5
+}
+
+input.copy_txt::selection {
+	color: #ffd7f0;
+	background-color: #ffd7f0
+}
