@@ -126,7 +126,7 @@
 <% each(oya/res) %>
 <hr>
 <div class="res_article_wrap">
-<!--(レス記事ヘッダここから)-->
+<% レス記事ヘッダここから %>
 <div class="res_article_title">[<% echo (oya/res/no) %>] <% echo (oya/res/sub) %></div>
 <div class="article_info">
 <span class="article_info_name"><% def(oya/res/email) %><a href="mailto:<% echo (oya/res/email) %>"><% /def %><% echo (oya/res/name) %><% def(oya/res/email) %></a><% /def %></span><% def(oya/res/url) %><span class="article_info_desc">[<a href="<% echo (oya/res/url) %>" target="_blank" rel="nofollow noopener noreferrer">URL</a>]</span> <% /def %>
@@ -140,7 +140,7 @@
 <% def(oya/res/continue) %><span class="article_info_continue">☆<a href="<% echo (self) %>?mode=continue&no=<% echo (oya/res/continue) %>">続きを描く</a></span><% /def %> <% def(oya/res/pch) %><% def(oya/res/continue) %>| <% /def %><span class="article_info_animation">☆<a href="<% echo (self) %>?mode=openpch&pch=<% echo (oya/res/pch) %>" target="_blank">動画</a></span><% /def %>
 </div>
 <% /def %>
-<!--(レス記事ヘッダここまで)-->
+<% レス記事ヘッダここまで %>
 
 <% def(n) %>
 <!--

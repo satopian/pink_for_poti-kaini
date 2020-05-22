@@ -309,7 +309,7 @@ PMAX_H //高さ
 <% each(oya/res) %>
 <hr>
 <div class="res_article_wrap">
-	<% レス記事ヘッダここから %>
+<% レス記事ヘッダここから %>
 <div class="res_article_title">[<% echo (oya/res/no) %>] <% echo (oya/res/sub) %></div>
 <div class="article_info">
 <span class="article_info_name"><% def(oya/res/email) %><a href="mailto:<% echo (oya/res/email) %>"><% /def %><% echo (oya/res/name) %><% def(oya/res/email) %></a><% /def %></span><% def(oya/res/url) %><span class="article_info_desc">[<a href="<% echo (oya/res/url) %>" target="_blank" rel="nofollow noopener noreferrer">URL</a>]</span> <% /def %>
