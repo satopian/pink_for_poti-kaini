@@ -1,0 +1,29 @@
+#body .thread .posted_image {
+	float: left;
+	margin-right: 12px;
+	margin-bottom: 12px;
+}
+#post_table {
+	border-collapse: collapse;
+	text-align: left;
+	margin-top: 12px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	width: 430px;
+	}
+.post_input_com {
+	color: #555555;
+	height: 6em;
+	border: 1px #666666 solid;
+	width: 338px;
+	}
+	}
+.admindel_table {
+	border-collapse: collapse;
+	width: 928px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	}
