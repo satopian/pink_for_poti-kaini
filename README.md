@@ -1,8 +1,8 @@
-# POTI-board用テンプレートPINK 改二
+# POTI-board用テーマPINK 改二
 
-**[POTI-board改二](https://github.com/sakots/poti-kaini)専用のテンプレートです。**
+**[POTI-board改二](https://github.com/sakots/poti-kaini)用のテンプレートです。**
 
-**[POTI-board改専用はこちら](https://github.com/satopian/pink)**
+**[POTI-board改用はこちら](https://github.com/satopian/pink)**
 
 **「POTI-board改」と「POTI-board改二」のテンプレートは互換性がありません。**
 
@@ -24,7 +24,7 @@ GitHubの[Issues](https://github.com/satopian/pink_for_pot-kaini/issues)でも�
 
 [お絵かき掲示板](https://pbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしたものです。
 
-[POTI-board用テンプレート PINK を配布します。: STP^3](http://stp.sblo.jp/article/182310034.html)
+[POTI-board用テーマ PINK を配布します。: STP^3](http://stp.sblo.jp/article/182310034.html)
 
 BBSNoteのようなレイアウト。
 
@@ -34,21 +34,25 @@ BBSNoteのようなレイアウト。
 画像アップロード掲示板ではなくお絵かき掲示板として使うためです。
 管理人投稿からの画像アップロードには対応しています。
 
-## このテンプレートを使うために必要なもの
+## このテーマを使うために必要なもの
 
 お絵かき掲示板のスクリプト本体、[POTI-board改二](https://github.com/sakots/poti-kaini)をダウンロードします。
 
-## このテンプレートのダウンロード 
+## このテーマのダウンロード 
 
 **緑色の「Clone or download」ボタンを押下してpink_for_pot-kaini-master.zipを入手します。**
 
+## テーマを入れ替える前に ##
+
+テーマを入れ替える前に、掲示板が問題なく動作することを確認します。
+
 ## サーバへの転送
 
-> //スキンのディレクトリ。'/'まで
-> //skinディレクトリに使いたいtemplateをいれて使ってください。(推奨)
-> //別のディレクトリにしたい場合は設定してください。
-> //例えばおまけのnee2を使いたい場合はskin_nee2/とすることができます。初期値は skin/ です。
-> define('SKIN_DIR', 'skin/');
+> //スキンのディレクトリ。'/'まで  
+> //skinディレクトリに使いたいtemplateをいれて使ってください。(推奨)  
+> //別のディレクトリにしたい場合は設定してください。  
+> //例えばおまけのnee2を使いたい場合はskin_nee2/とすることができます。初期値は skin/ です。  
+> define('SKIN_DIR', 'skin/');  
 >
 
 config.phpを編集します。
@@ -62,13 +66,13 @@ config.phpを編集します。
 ![Screen-2020-05-19_23-14-36](https://user-images.githubusercontent.com/44894014/82337569-e33bc000-9a26-11ea-8a8d-d00a4f08c238.png)
 
 ↑
-ダウンロードしたpotiboard2フォルダに、pinkという新しいフォルダを追加します。
+ダウンロードしたpotiboard2フォルダに、ダウンロードしたpinkフォルダを追加します。
 
 
 ![Screen-2020-05-19_23-14-45](https://user-images.githubusercontent.com/44894014/82337582-e8007400-9a26-11ea-9829-a32683e7622a.png)
 
 ↑
-その中にここからダウンロードしたファイルをまとめます。
+その中に入っているファイル。
 
 
 > define('SKIN_DIR', 'pink/');
@@ -79,6 +83,4 @@ config.phpを編集します。
 
 掲示板が表示されたら設置完了です。
 
-このテンプレートを使う前に、掲示板が動作することを確認することをおすすめします。
-
-テンプレートを変更しても表示が変わらない時は、管理画面からログ更新するか、なんでもいいので書き込みます。
+テーマを変更しても表示が変わらない時は、管理画面からログ更新するか、なんでもいいので書き込みます。
