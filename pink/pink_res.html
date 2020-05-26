@@ -34,7 +34,7 @@
 -->
 <% /def %>
 <% ========== クッキー読込み用JavaScript(必須) ========== %>
-<script type="text/javascript" src="loadcookie.js"></script>
+<script src="loadcookie.js"></script>
 </head>
 <body>
 <div id="top"></div>
@@ -186,7 +186,7 @@
 <div class="res_button_wrap">
 	<% def(form) %>
 	<% def(resname) %>
-	<!--(コピー対象要素とコピーボタン)--><input class="copy_txt" id="t" type="text" value="<% echo(resname) %>さん" readonly><button class="copy_button" onclick="c()">投稿者名をコピー</button><script>function c(){var copyTarget;document.getElementById("t").select(),document.execCommand("Copy")}</script>
+	<!--コピー対象要素とコピーボタン--><input class="copy_txt" id="t" type="text" value="<% echo(resname) %>さん" readonly><button class="copy_button" onclick="c()">投稿者名をコピー</button><script>function c(){var copyTarget;document.getElementById("t").select(),document.execCommand("Copy")}</script>
 	<% /def %>
 	<% /def %>
 	
