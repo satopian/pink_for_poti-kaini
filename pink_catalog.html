@@ -22,7 +22,7 @@
 </head><body>
 <div id="body">
 <header>
-<h1 id="bbs_title">カタログモード</h1>
+<h1 id="bbs_title">カタログモード - <% echo (title) %></h1>
 <nav>
 <div id="self2">
 [<a href="<% echo (self2) %>"><% echo (title) %></a>]
@@ -51,10 +51,11 @@
 <div class="catalog_time"><% echo (y/x/now) %></div>
 </div>
 <% ========== 画像があれば・・・ ========== %><% def(y/x/imgsrc) %>
-<div class="catalog_img"><a href="<% echo (self) %>?res=<% echo (y/x/no) %>" title="<% echo (y/x/sub) %> (by <% echo (y/x/name) %><% echo (y/x/trip) %>)"><img src="<% echo (y/x/imgsrc) %>" alt="<% echo (y/x/sub) %> ( <% echo (y/x/name) %><% echo (y/x/trip) %> )" title="<% echo (y/x/sub) %> ( <% echo (y/x/name) %><% echo (y/x/trip) %> )"></a></div>
+<div class="catalog_img"><a href="<% echo (self) %>?res=<% echo (y/x/no) %>" (by <% echo (y/x/name) %><% echo (y/x/trip) %>)"><img src="<% echo (y/x/imgsrc) %>" alt="<% echo (y/x/sub) %> by <% echo (y/x/name) %><% echo (y/x/trip) %>)" title="<% echo (y/x/sub) %> by <% echo (y/x/name) %><% echo (y/x/trip) %>"></a></div>
+
 <% /def %>
 <% ========== 文字のみならば・・・ ========== %><% def(y/x/txt) %>
-<div class="catalog_noimg"><a href="<% echo (self) %>?res=<% echo (y/x/no) %>" title="<% echo (y/x/sub) %> ( <% echo (y/x/name) %><% echo (y/x/trip) %> )">画像なし</a></div>
+<div class="catalog_noimg"><a href="<% echo (self) %>?res=<% echo (y/x/no) %>">画像なし</a></div>
 <% /def %></div><% /def %>
 <% ========== 記事が無い場合 ========== %><% def(y/x/noimg) %><div class="catalog_wrap no_article"></div><% /def %>
 <% /each %>
@@ -118,10 +119,10 @@
 </form>
 
 <% ========== JavaScriptの実行(クッキーを読込み、フォームに値をセット) ========== %>
-<script type="text/javascript">
+<script>
 l(); //LoadCookie
 </script>
-
+	
 <!--著作権表示 削除しないでください-->
 
 <div class="copyright">

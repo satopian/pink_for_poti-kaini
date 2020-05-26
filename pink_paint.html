@@ -475,24 +475,24 @@ if(DynamicColor) PaletteListSetColor();
 <% /def %>
 
 </form>
-    <% ========== コンティニュー説明 ========== %>
-    <div class="howtocontinue">
-           <ul id="up_desc">
-    <% def(newpost_nopassword) %>
-	<li>新規投稿なら削除キーがなくても続きを描く事ができます。</li>
-    <% elsedef %>
-	<li>続きを描くには描いたときの削除キーが必要です。</li>
-    <% /def %>
-	<% echo(addinfo) %>
-        </ul>
-    </div>
-    <% ========== JavaScriptの実行(クッキーを読込み、フォームに値をセット) ========== %>
-    <script language="JavaScript"><!--
+<% ========== コンティニュー説明 ========== %>
+<div class="howtocontinue">
+		<ul id="up_desc">
+<% def(newpost_nopassword) %>
+<li>新規投稿なら削除キーがなくても続きを描く事ができます。</li>
+<% elsedef %>
+<li>続きを描くには描いたときの削除キーが必要です。</li>
+<% /def %>
+<% echo(addinfo) %>
+	</ul>
+</div>
+<% ========== JavaScriptの実行(クッキーを読込み、フォームに値をセット) ========== %>
+<script>
 l(); //LoadCookie
-//--></script>
-  </div>
-  <% /def %>
-  <% ========== コンティニューモード ここまで ========== %><!--著作権表示 削除しないでください-->
+</script>
+</div>
+<% /def %>
+<% ========== コンティニューモード ここまで ========== %><!--著作権表示 削除しないでください-->
 <footer>
 <div class="copyright">
 <!-- GazouBBS v3.0 --><!-- ふたば改0.8 --><!-- POTI-board -->
