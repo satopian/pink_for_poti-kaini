@@ -63,13 +63,13 @@ config.phpを編集します。
 
 の場合。
 
-![Screen-2020-05-19_23-14-36](https://user-images.githubusercontent.com/44894014/82337569-e33bc000-9a26-11ea-8a8d-d00a4f08c238.png)
+![Screen-2020-05-27_15-35-53](https://user-images.githubusercontent.com/44894014/83000244-0ed13280-a045-11ea-92f1-37c6d6238a72.png)
 
 ↑
 ダウンロードしたpotiboard2フォルダに、ダウンロードしたpinkフォルダを追加します。
 
 
-![Screen-2020-05-19_23-14-45](https://user-images.githubusercontent.com/44894014/82337582-e8007400-9a26-11ea-9829-a32683e7622a.png)
+![Screen-2020-05-27_18-09-37](https://user-images.githubusercontent.com/44894014/83000458-5c4d9f80-a045-11ea-8a31-94ce1f2df273.png)
 
 ↑
 その中に入っているファイル。
