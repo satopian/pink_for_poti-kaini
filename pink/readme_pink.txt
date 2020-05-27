@@ -1,13 +1,13 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
            POTI-board用テンプレート「PINK」
-                 by さとぴあ ( http://stp.sblo.jp )
+                 by さとぴあ ( https://pbbs.sakura.ne.jp/ )
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ぷにゅねっと http://www.punyu.net/php/
 のPOTI-boardをphp7で使えるように改造した
 
-POTI-board改二 v2.2.7
+POTI-board改二 v2.6
 https://poti-k.info/
 
 以降に対応したテンプレートです。
@@ -30,7 +30,8 @@ POTI改公式サイト https://poti-k.info/
 
 から、POTI-board改二をダウンロードし、設置ディレクトリにアップロードします。
 
-このテンプレートの以下のファイルをpinkというディレクトリにまとめてアップロードします。
+このテーマの以下のファイルがpinkというフォルダに入っています。
+このフォルダをpotiboard.phpと同じディレクトリにアップロードします。
 
 pink_main.html
 pink_other.html
@@ -39,8 +40,6 @@ pink_res.html
 pink_catalog.html
 pink.css
 pink_ie.css
-palette.txt
-siihelp.php
 template_ini.php
 
 icomoon フォルダとその中身も同じディレクトリにアップロードします。
@@ -48,18 +47,16 @@ TwitterとFacebookのアイコンが入っています。
 
 config.phpの
 
-> //スキンのディレクトリ。'/'まで
-> //skinディレクトリに使いたいtemplateをいれて使ってください。(推奨)
+> //テーマ(テンプレート)のディレクトリ。'/'まで
+> //themeディレクトリに使いたいtemplateをいれて使ってください。(推奨)
 > //別のディレクトリにしたい場合は設定してください。
-> //例えばおまけのnee2を使いたい場合はskin_nee2/とすることができます。初期値は skin/ です。
-> define('SKIN_DIR', 'skin/');
->
+> //例えばおまけのnee2を使いたい場合はtheme_nee2/とすることができます。初期値は theme/ です。
 
 の箇所を編集します。
 
-pinkというディレクトリにファイル一式をまとめたので
+pinkというディレクトリにファイル一式がまとまっているので
 
-> define('SKIN_DIR', 'pink/');
+define('SKIN_DIR', 'pink/');
 
 と設定します。
 

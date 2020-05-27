@@ -24,7 +24,7 @@
 <body>
 <div id="body">
 <header>
-<h1 id="bbs_title"><% def(post_mode) %><% def(rewrite) %><% elsedef %><% def(admin_del) %><% elsedef %><% def(admin) %><% elsedef %>投稿フォーム<% /def %><% /def %><% /def %><% /def %><% def(rewrite) %>編集モード<% /def %><% def(admin_in) %>管理用<% /def %><% def(admin) %><% def(rewrite) %> - <% /def %><% /def %><% def(admin) %> 管理人による投稿<% /def %><% def(admin_del) %>記事削除<% /def %><% def(err_mode) %>エラー！<% /def %> - <% echo(title) %></h1>
+<h1 id="bbs_title"><% def(post_mode) %><% def(rewrite) %><% elsedef %><% def(admin_del) %><% elsedef %><% def(admin) %><% elsedef %>投稿フォーム<% /def %><% /def %><% /def %><% /def %><% def(rewrite) %>編集モード<% /def %><% def(admin_in) %>管理用<% /def %><% def(admin) %><% def(rewrite) %> - <% /def %><% /def %><% def(admin) %> 管理人による投稿<% /def %><% def(admin_del) %>記事削除<% /def %><% def(err_mode) %>エラー！<% /def %> - <span class="title_name_wrap"><% echo(title) %></span></h1>
 <% def(n) %>
 <!-- 
 投稿モード
@@ -121,11 +121,10 @@ PMAX_H //高さ
 	?>
 	</select>&nbsp;
 <% ===キャンバスサイズ ここまで === %>
-<span class="neo_checknon">
-<label class="checkbox"><input type="checkbox" name="useneo" checked="checked" /><span class="use_neo">NEOを使う</span></label>
-	</span>
-	<span class="anime_checkbox">
-<label class="checkbox"><input type="checkbox" value="true" name="anime"<% echo(animechk) %>><span class="use_animation">動画記録</span></label></span>
+<label class="neo_checkbox"><input type="checkbox" name="useneo" checked="checked" /><span class="use_neo">NEOを使う</span></label>
+<span class="anime_checkbox">
+<% def(anime) %><label class="anime_checkbox"><input type="checkbox" value="true" name="anime"<% echo (animechk) %>><span class="use_animation">動画記録</span></label>
+<% /def %>
 <input name="pch_upload" type="file" />
 <input type="hidden" name="admin" value="<% echo(admin) %>">
 <input type="hidden" name="mode" value="paint"></form>

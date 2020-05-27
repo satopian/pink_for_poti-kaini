@@ -81,6 +81,14 @@ input:-webkit-autofill {
 	text-align: center;
 }
 
+label{
+	cursor:pointer;
+}
+label.checkbox {
+    display: inline-block;
+    margin: 8px 0;
+}
+
 /* リンクの色 */
 a {
 	color: #6f6f6f;
@@ -983,9 +991,6 @@ a:hover {
 
 .webstyle_wrap {
 	display: inline-block;
-}
-label{
-	cursor:pointer;
 }
 /* ツール左右切り替え */
 .nts_radio {
