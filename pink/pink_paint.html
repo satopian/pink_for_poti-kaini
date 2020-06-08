@@ -41,13 +41,13 @@
 		}
 	</script>
 	<% def(useneo) %>
-<link rel="stylesheet" href="neo.css" type="text/css" />
-<script src="neo.js" charset="UTF-8"></script>
+<link rel="stylesheet" href="neo.css?<% echo(stime) %>" type="text/css" />
+<script src="neo.js?<% echo(stime) %>" charset="UTF-8"></script>
 <% /def %>
 <% def(paintbbs) %>
 <% def(pch_mode) %>
-<link rel="stylesheet" href="neo.css" type="text/css" />
-<script src="neo.js" charset="UTF-8"></script>
+<link rel="stylesheet" href="neo.css?<% echo(stime) %>" type="text/css" />
+<script src="neo.js?<% echo(stime) %>" charset="UTF-8"></script>
 <% /def %>
 <% /def %>
 <% def(paintbbs) %>
@@ -181,6 +181,7 @@ pe[n]}}function GradView(a,f){d=document}function showHideLayer(){d=document;var
 	<% elsedef %><APPLET<% /def %>
 
  CODE="pbbs.PaintBBS.class" ARCHIVE="./PaintBBS.jar" NAME="paintbbs" WIDTH="<% echo(w) %>" HEIGHT="<% echo(h) %>" MAYSCRIPT>
+ <param name="neo_confirm_unload" value="true">
 <% /def %>
 <% ========== しぃペインター個別設定 ========== %>
 <% def(normal) %>
@@ -281,7 +282,7 @@ pe[n]}}function GradView(a,f){d=document}function showHideLayer(){d=document;var
 <TEXTAREA rows="1" name="setr" cols="13" onMouseOver="this.select()"></TEXTAREA><br>
 </FORM></div>
 <div class="palette_gradation"><FORM name="grad">
-	<label class="palette_desc" for="grdchk">GRADATION</label>&nbsp;<INPUT type="checkbox" name="view" OnClick="showHideLayer()" id="grdchk"><INPUT type="button" VALUE=" OK " OnClick="ChengeGrad()"><br>
+	<label class="palette_desc checkbox" ><INPUT type="checkbox" name="view" OnClick="showHideLayer()" id="grdchk">GRADATION&nbsp;</label><INPUT type="button" VALUE=" OK " OnClick="ChengeGrad()"><br>
 <SELECT name="p_st" onChange="GetPalette()">
 <option>1</option>
 <option>2</option>
@@ -361,7 +362,7 @@ if(DynamicColor) PaletteListSetColor();
 <% <div id="mode_head">動画表示モード</div> %>
 <% def(pch_mode) %>
 	</header>
-<div class="pch_animation">
+<div class="appstage">
 <% def(paintbbs) %>
 <APPLET-DUMMY name="pch" code="pch.PCHViewer.class" archive="PCHViewer.jar,PaintBBS.jar" width="<% echo(w) %>" height="<% echo(h) %>" MAYSCRIPT>
 <% /def %>
@@ -462,7 +463,7 @@ if(DynamicColor) PaletteListSetColor();
 <!-- NEOを使う -->
 <% def(ctype_pch) %>
 <% elsedef %>
-<label><input type="checkbox" name="useneo" checked="checked" /><span class="use_neo">NEOを使う</span></label>
+<label class="use_neo checkbox"><input type="checkbox" name="useneo" checked="checked" />NEOを使う</label>
 <% /def %>
 <input type="submit" value="続きを描く">
 
@@ -495,7 +496,7 @@ l(); //LoadCookie
 <div class="copyright">
 <!-- GazouBBS v3.0 --><!-- ふたば改0.8 --><!-- POTI-board -->
 <a href="https://poti-k.info/" target="_blank" rel="noopener noreferrer" title="POTI-board改二 <% echo(verlot) %>"><b>POTI-board改二 <% echo(ver) %></b></a>
-<span class="webstyle_wrap">Web Style by <a href="https://draclaw.com/" target="_blank" rel="noopener noreferrer" title="Cool Solid (by ドラ☆クロウ！)"><b>Cool Solid</b></a> &amp; <a href="http://stp.sblo.jp/article/182310034.html" target="_blank" rel="noopener noreferrer" title="PINK <% echo(tver) %> (by さとぴあ)"><b>PINK</b></a></span><br>
+<span class="webstyle_wrap">Web Style by <a href="https://draclaw.com/" target="_blank" rel="noopener noreferrer" title="Cool Solid (by ドラ☆クロウ！)"><b>Cool Solid</b></a> &amp; <a href="https://github.com/satopian/pink_for_poti-kaini" target="_blank" rel="noopener noreferrer" title="PINK <% echo(tver) %> (by さとぴあ)"><b>PINK</b></a></span><br>
 OriginalScript - <a href="http://www.punyu.net/" target="_blank" rel="noopener noreferrer" title="POTI-board v1.32 (by ぷにゅねっと)">POTI-board</a>
 <a href="https://www.2chan.net/script/" target="_blank" rel="noopener noreferrer  nofollow" title="futaba.php v0.8 lot.031015 (by ふたば)">futaba.php</a> <a href="http://php.loglog.jp/" target="_blank" rel="noopener noreferrer" title="gazou.php v3.0 (by レッツPHP!)">gazou.php</a><br>
 <% def(paint) %>

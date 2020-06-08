@@ -28,19 +28,21 @@ MONO WHITEと、Cool Solid ( 黒鋼彗牙さん作・ https://draclaw.com )を�
 
 POTI改公式サイト https://poti-k.info/
 
-から、POTI-board改二をダウンロードし、設置ディレクトリにアップロードします。
+から、POTI-board改二をダウンロードしアップロードします。
 
 このテーマの以下のファイルがpinkというフォルダに入っています。
-このフォルダをpotiboard.phpと同じディレクトリにアップロードします。
+このpinkフォルダをpotiboard.phpと同じディレクトリにアップロードします。
 
-pink_main.html
-pink_other.html
-pink_paint.html
-pink_res.html
-pink_catalog.html
-pink.css
-pink_ie.css
-template_ini.php
+/pink/     ディレクトリ(テーマのディレクトリはconfigで設定できます)
+   ｜.htaccess
+   ｜pink_main.html
+   ｜pink_res.html
+   ｜pink_other.html
+   ｜pink_catalog.html
+   ｜pink_paint.html
+   ｜pink.css
+   ｜template_ini.php
+    +/icomoon/
 
 icomoon フォルダとその中身も同じディレクトリにアップロードします。
 TwitterとFacebookのアイコンが入っています。

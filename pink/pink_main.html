@@ -110,9 +110,9 @@ PMAX_H //高さ
 <% ===キャンバスサイズ ここまで === %>
 
 <!-- NEOを使う -->
-<label class="neo_checkbox"><input type="checkbox" name="useneo" checked="checked" /><span class="use_neo">NEOを使う</span></label>
+<label class="checkbox use_neo"><input type="checkbox" name="useneo" checked="checked" />NEOを使う</label>
 
-<% def(anime) %><label class="anime_checkbox"><input type="checkbox" value="true" name="anime"<% echo (animechk) %>><span class="use_animation">動画記録</span></label>
+<% def(anime) %><label class="checkbox use_animation"><input type="checkbox" value="true" name="anime" <% echo (animechk) %>>動画記録</span></label>
 	<% /def %>
 	<% def(n) %>
 	<!--
@@ -463,7 +463,7 @@ l(); //LoadCookie
 <div class="copyright">
 <!-- GazouBBS v3.0 --><!-- ふたば改0.8 --><!-- POTI-board -->
 <a href="https://poti-k.info/" target="_blank" rel="noopener noreferrer" title="POTI-board改二 <% echo (verlot) %>"><b>POTI-board改二 <% echo (ver) %></b></a>
-	<span class="webstyle_wrap">Web Style by <a href="https://draclaw.com/" target="_blank" rel="noopener noreferrer" title="Cool Solid (by ドラ☆クロウ！)"><b>Cool Solid</b></a> &amp; <a href="http://stp.sblo.jp/article/182310034.html" target="_blank" rel="noopener noreferrer" title="PINK <% echo (tver) %> (by さとぴあ)"><b>PINK</b></a></span><br>
+	<span class="webstyle_wrap">Web Style by <a href="https://draclaw.com/" target="_blank" rel="noopener noreferrer" title="Cool Solid (by ドラ☆クロウ！)"><b>Cool Solid</b></a> &amp; <a href="https://github.com/satopian/pink_for_poti-kaini" target="_blank" rel="noopener noreferrer" title="PINK <% echo (tver) %> (by さとぴあ)"><b>PINK</b></a></span><br>
 	OriginalScript - <a href="http://www.punyu.net/" target="_blank" rel="noopener noreferrer" title="POTI-board v1.32 (by ぷにゅねっと)">POTI-board</a>
 <a href="https://www.2chan.net/script/" target="_blank" rel="noopener noreferrer" title="futaba.php v0.8 lot.031015 (by ふたば)">futaba.php</a> <a href="http://php.loglog.jp/" target="_blank" rel="noopener noreferrer" title="gazou.php v3.0 (by レッツPHP!)">gazou.php</a><br>
 <% def(paint) %>
