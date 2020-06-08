@@ -2,11 +2,9 @@
 
 **[POTI-board改二](https://github.com/sakots/poti-kaini)用のテンプレートです。**
 
-**[POTI-board改用はこちら](https://github.com/satopian/pink)**
-
 **「POTI-board改」と「POTI-board改二」のテンプレートは互換性がありません。**
 
-間違えると掲示板が動作しなくなりますので注意が必要です。
+間違えると掲示板が動作しなくなりますのでご注意ください。
 
 今後のスクリプトの保守は改二に移行する予定です。
 新規設置を検討されている方は、より高速に動作する[POTI-board改二](https://github.com/sakots/poti-kaini)の利用をご検討ください。
@@ -48,12 +46,10 @@ BBSNoteのようなレイアウト。
 
 ## サーバへの転送
 
-> //スキンのディレクトリ。'/'まで  
-> //skinディレクトリに使いたいtemplateをいれて使ってください。(推奨)  
+> //テーマ(テンプレート)のディレクトリ。'/'まで  
+> //themeディレクトリに使いたいtemplateをいれて使ってください。(推奨)  
 > //別のディレクトリにしたい場合は設定してください。  
-> //例えばおまけのnee2を使いたい場合はskin_nee2/とすることができます。初期値は skin/ です。  
-> define('SKIN_DIR', 'skin/');  
->
+> //例えばおまけのnee2を使いたい場合はtheme_nee2/とすることができます。初期値は theme/ です。  
 
 config.phpを編集します。
 
@@ -63,13 +59,13 @@ config.phpを編集します。
 
 の場合。
 
-![Screen-2020-05-19_23-14-36](https://user-images.githubusercontent.com/44894014/82337569-e33bc000-9a26-11ea-8a8d-d00a4f08c238.png)
+![Screen-2020-05-27_15-35-53](https://user-images.githubusercontent.com/44894014/83000244-0ed13280-a045-11ea-92f1-37c6d6238a72.png)
 
 ↑
 ダウンロードしたpotiboard2フォルダに、ダウンロードしたpinkフォルダを追加します。
 
 
-![Screen-2020-05-19_23-14-45](https://user-images.githubusercontent.com/44894014/82337582-e8007400-9a26-11ea-9829-a32683e7622a.png)
+![Screen-2020-05-27_18-09-37](https://user-images.githubusercontent.com/44894014/83000458-5c4d9f80-a045-11ea-8a31-94ce1f2df273.png)
 
 ↑
 その中に入っているファイル。
@@ -77,10 +73,10 @@ config.phpを編集します。
 
 > define('SKIN_DIR', 'pink/');
 
-と設定したので、 pink/ ディレクトリのテンプレートが適用されます。
+と設定したので、 pink/ ディレクトリのテーマが適用されます。
 
 **pinkディレクトリを転送します。**
 
 掲示板が表示されたら設置完了です。
 
-テーマを変更しても表示が変わらない時は、管理画面からログ更新するか、なんでもいいので書き込みます。
+テーマを変更しても表示が変わらない時は、管理画面からログ更新するかなんでもいいので書き込みます。
