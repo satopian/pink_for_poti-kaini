@@ -2,11 +2,9 @@
 
 **[POTI-board改二](https://github.com/sakots/poti-kaini)用のテンプレートです。**
 
-**[POTI-board改用はこちら](https://github.com/satopian/pink)**
-
 **「POTI-board改」と「POTI-board改二」のテンプレートは互換性がありません。**
 
-間違えると掲示板が動作しなくなりますので注意が必要です。
+間違えると掲示板が動作しなくなりますのでご注意ください。
 
 今後のスクリプトの保守は改二に移行する予定です。
 新規設置を検討されている方は、より高速に動作する[POTI-board改二](https://github.com/sakots/poti-kaini)の利用をご検討ください。
