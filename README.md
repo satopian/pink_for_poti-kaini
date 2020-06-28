@@ -6,7 +6,7 @@
 
 間違えると掲示板が動作しなくなりますのでご注意ください。
 
-スクリプトの保守は改二に移行しました。
+POTI-boardは改のサポートを終了し改二に移行しました。
 新規設置を検討されている方は、より高速に動作する[POTI-board改二](https://github.com/sakots/poti-kaini)の利用をご検討ください。
 
 ## サポート
@@ -16,7 +16,7 @@ GitHubの[Issues](https://github.com/satopian/pink_for_pot-kaini/issues)でも�
 
 ### 設置サンプル
 
-[POTI-board用テンプレート PINK 設置サンプル](https://pbbs.sakura.ne.jp/cgi/neosample/poti/)
+[POTI-board用テーマ PINK 設置サンプル](https://pbbs.sakura.ne.jp/cgi/neosample/poti/)
 
 ### 特徴
 
