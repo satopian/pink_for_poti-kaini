@@ -38,7 +38,7 @@ BBSNoteのようなレイアウト。
 
 ## このテーマのダウンロード 
 
-**緑色の「code」ボタンを押下してpink_for_pot-kaini-master.zipを入手します。**
+**緑色の「Code」ボタンを押下してpink_for_pot-kaini-master.zipを入手します。**
 
 ## テーマを入れ替える前に ##
 
