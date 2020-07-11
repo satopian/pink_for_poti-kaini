@@ -362,7 +362,7 @@ if(DynamicColor) PaletteListSetColor();
 <% <div id="mode_head">動画表示モード</div> %>
 <% def(pch_mode) %>
 	</header>
-<div class="appstage">
+<div class="appstage" style=width:<% echo(w) %>px;height:<% echo(h) %>px>
 <% def(paintbbs) %>
 <APPLET-DUMMY name="pch" code="pch.PCHViewer.class" archive="PCHViewer.jar,PaintBBS.jar" width="<% echo(w) %>" height="<% echo(h) %>" MAYSCRIPT>
 <% /def %>
