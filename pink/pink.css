@@ -908,16 +908,24 @@ a:hover {
 }
 
 .article_info_name {
-	padding-right: 6px;
-	font-size: 16.5px;
-	color: gray;
-	font-weight: 600;
+	color: grey;
+	font-weight: 700;
+	margin: 0 5px 5px 0;
+	border: 1px solid #dcb5cd;
+	border-radius: 5px;
+	line-height: 1em;
+	display: inline-block
 }
 
-/* メールのリンク下線の色と不透明度 */
 .article_info_name a {
-	text-decoration-color: #6666668a;
-	color: gray;
+	color: grey;
+	text-decoration: none;
+	padding: 4px;
+	display: block
+}
+
+.article_info_name:hover {
+	background-color: #ffe4f5
 }
 
 .use_neo,.use_animation {
