@@ -43,9 +43,11 @@
 <div class="bbsmenu">
 [<a href="<% echo (home) %>" target="_top">ホーム</a>]
 [<a href="<% echo (self) %>?mode=catalog">カタログ</a>]
-<!-- [<a href="<% echo (self) %>?mode=newpost">新規投稿</a>] -->
+<% def(upfile) %>
+[<a href="<% echo (self) %>?mode=newpost"><span class="txtnon">新規</span>投稿</a>]
+<% /def %>
 <span class="txtnon">[<a href="<% echo (self) %>?mode=piccom">未投稿画像</a>]</span>
-[<a href="<% echo (self) %>?mode=admin">管理用</a>]
+[<a href="<% echo (self) %>?mode=admin">管理<span class="txtnon">用</span></a>]
 <a href="#bottom">▽</a>
 <% def(n) %>
 <!--
@@ -210,13 +212,13 @@ PMAX_H //高さ
 	<% ========== ファイルアップロード時の説明 ========== %>
 	<% def(upfile) %>
 	<div class="howtowrite">
-	<ul id="up_desc">
-	<li>画像は横 <% echo (maxw) %>ピクセル、縦 <% echo (maxh) %>ピクセルを超えると縮小表示されます。</li>
-	<% /def %>
-	<li>最大投稿データ量は <% echo (maxkb) %> KB までです。sageるときはE-mail欄にsageを入れてね。</li>
-	<% echo (addinfo) %>
-	</ul>
+		<ul id="up_desc">
+			<li>画像は横 <% echo (maxw) %>ピクセル、縦 <% echo (maxh) %>ピクセルを超えると縮小表示されます。</li>
+		<li>最大投稿データ量は <% echo (maxkb) %> KB までです。
+			<% echo (addinfo) %>
+		</ul>
 	</div>
+	<% /def %>
 	</td></tr>
 	</table>
 	</form>

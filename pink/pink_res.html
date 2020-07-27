@@ -327,39 +327,31 @@ PMAX_H //高さ
 -->
 <% /def %>
 <% ========== ファイルアップロード欄 ========== %>
-<% def(n) %>
- <!--
-	def(upfile) 
+<% def(upfile) %>
+
 	 <tr>
   <td class="post_table_title">添付画像</td>
-  <td><input type="file" name="upfile"></td>
+  <td><input type="file" name="upfile"><label class="checkbox textonly"> <input type="checkbox" name="textonly" value="on" checked>画像なし</label></td>
  </tr>
- 	/def-->
 <% /def %>
  <tr>
   <td class="post_table_title">削除キー</td>
   <td><input type="password" name="pwd" value="" class="post_input_pass" autocomplete="current-password">
   <span class="howtoedit">(記事の編集削除用。英数字で)</span>
-<% def(upfile) %>
-<% def(n) %>
-<!--
-// 画像なしにデフォでチェックする(アップロード使用不可)
--->
-<% /def %>
-<input type="hidden" name="textonly" value="1">
- <% /def %></td>
+</td>
  </tr>
  <tr><td colspan="2" style="text-align: center;" class="post_table_submit td_noborder"><input type="submit" value="送信する" class="post_submit"></td></tr>
  <tr>
   <td colspan="2" class="td_noborder">
-<ul class="howtowrite">
 <% ========== ファイルアップロード時の説明 ========== %>
 <% def(upfile) %>
-<li>画像は横 <% echo (maxw) %>ピクセル、縦 <% echo (maxh) %>ピクセルを超えると縮小表示されます。</li>
+	<ul class="howtowrite">
+	<li>画像を添付する場合は画像なしのチェックを外してください。</li>
+	<li>最大投稿データ量は <% echo (maxkb) %> KB までです。</li>
+	<% echo (addinfo) %>
+	</ul>
 <% /def %>
-<li><% def(upfile) %>最大投稿データ量は <% echo (maxkb) %> KB までです。<% /def %>sageるときはE-mail欄にsageを入れてね。</li>
-<% echo (addinfo) %>
-</ul></td></tr>
+</td></tr>
 </table>
 </form>
 <% /def %>

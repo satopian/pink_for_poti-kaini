@@ -1,11 +1,11 @@
 <?php
 /*
-  * Template - PINK - lot.200716  by さとぴあ  >> https://pbbs.sakura.ne.jp/
+  * Template - PINK - lot.200728  by さとぴあ  >> https://pbbs.sakura.ne.jp/
   *
 */
 
 //テンプレートのバージョン
-define('TEMPLATE_VER', "lot.200716");
+define('TEMPLATE_VER', "lot.200728");
 
 
 /* ---------- ADD:2004/06/22 ---------- */
@@ -48,7 +48,7 @@ define('MSG035', "日本語で何か書いてください。");
 define('MSG036', "本文にURLを書く事はできません。");
 define('MSG037', "その名前は使えません。");
 define('MSG038', "そのタグは使えません。");
-define('MSG039', "予備");
+define('MSG039', "コメントのみの新規投稿はできません。");
 define('MSG040', "予備");
 
 

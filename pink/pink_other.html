@@ -206,11 +206,10 @@ PMAX_H //高さ
  </tr>
 <% ========== ファイルアップロード欄 ========== %>
 <% def(upfile) %>
- <% def(admin) %><tr>
-
+<tr>
 <td class="post_table_title">添付画像</td>
   <td><input type="file" name="upfile"><label class="checkbox textonly"> <input type="checkbox" name="textonly" value="on">画像なし</label></td>
- </tr><% /def %>
+ </tr>
 <% /def %>
 <% ========== お絵かき画像選択欄 ========== %>
 <% def(tmp) %>
@@ -234,9 +233,8 @@ PMAX_H //高さ
 <% ========== 新規投稿説明 ========== %>
 <ul class="howtowrite">
 <% def(regist) %>
-<% def(admin) %>
-<li>添付可能ファイル：GIF, JPG, PNG ブラウザによっては正常に添付できないことがあります。</li>
-<li>画像は横 <% echo(maxw) %>ピクセル、縦 <% echo(maxh) %>ピクセルを超えると縮小表示されます。</li>
+<% def(upfile) %>
+<li>画像を添付する場合は画像なしのチェックを外してください。</li>
 <li>最大投稿データ量は <% echo(maxkb) %> KB までです。sage機能付き。</li>
 <% /def %>
 <% /def %>
@@ -244,10 +242,8 @@ PMAX_H //高さ
 <% def(rewrite) %>
 <li>E-mail以外の項目は 未入力(空白)にすると内容はそのままです。</li>
 <li>編集では クッキーは保存されません。さらにsageを入れても位置は変わりません。</li>
-<li>トリップは 再生成されるので、名前を変更しない場合は 未入力(空白)にしてください。</li>
 <% /def %>
 <% ========== 以下共通 ========== %>
-<% echo(addinfo) %>
 </ul></td>
  </tr>
 </table>
