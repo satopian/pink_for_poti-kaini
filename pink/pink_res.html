@@ -186,7 +186,11 @@
 <div class="res_button_wrap">
 	<% def(form) %>
 	<% def(resname) %>
-	<!--コピー対象要素とコピーボタン--><input class="copy_txt" id="t" type="text" value="<% echo(resname) %>さん" readonly><button class="copy_button" onclick="c()">投稿者名をコピー</button><script>function c(){var copyTarget;document.getElementById("t").select(),document.execCommand("Copy")}</script>
+	<script>function add_to_com(){
+		document.getElementById("p_input_com").value += "<% echo(resname) %>さん";
+		}</script>
+	
+	<% コピーボタン %><button class="copy_button" onclick="add_to_com()">投稿者名をコピー</button>
 	<% /def %>
 	<% /def %>
 	
@@ -316,7 +320,7 @@ PMAX_H //高さ
  </tr>
  <tr>
   <td class="post_table_title">本文<% def(usecom) %>(必須)<% /def %></td>
-  <td><textarea name="com" class="post_input_com"></textarea></td>
+  <td><textarea name="com" class="post_input_com" id="p_input_com"></textarea></td>
  </tr>
  <% def(n) %>
  <!--
