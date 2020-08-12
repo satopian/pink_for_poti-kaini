@@ -322,6 +322,13 @@ if(DynamicColor) PaletteListSetColor();
 </div>
 </div>
 <% ========== 動的パレット制御関連 ここまで ========== %>
+
+<script type='text/javascript' src='./hsvpalette.js'></script>
+<script type='text/javascript'>
+hsvp_select()
+</script>
+
+
 <div class="centering">
 <% ========== 描画時間動的表示 ========== %>
 <div class="applet_painttime">
@@ -362,7 +369,7 @@ if(DynamicColor) PaletteListSetColor();
 <% <div id="mode_head">動画表示モード</div> %>
 <% def(pch_mode) %>
 	</header>
-<div class="appstage" style=width:<% echo(w) %>px;height:<% echo(h) %>px>
+<div class="appstage" style="width:<% echo(w) %>px; height:<% echo(h) %>px">
 <% def(paintbbs) %>
 <APPLET-DUMMY name="pch" code="pch.PCHViewer.class" archive="PCHViewer.jar,PaintBBS.jar" width="<% echo(w) %>" height="<% echo(h) %>" MAYSCRIPT>
 <% /def %>
