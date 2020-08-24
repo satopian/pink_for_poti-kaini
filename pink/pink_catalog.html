@@ -47,11 +47,11 @@
 <% ========== 記事があれば表示 ========== %><% def(y/x/no) %><div class="catalog_wrap">
 <div class="catalog_info_wrap">
 <div class="catalog_title"><a href="<% echo (self) %>?res=<% echo (y/x/no) %>">[<% echo (y/x/no) %>]&nbsp;<% echo (y/x/sub) %></a></div>
-<div class="catalog_name"><% echo (y/x/name) %><% echo (y/x/trip) %></div>
+<div class="catalog_name"><% echo (y/x/name) %></div>
 <div class="catalog_time"><% echo (y/x/now) %></div>
 </div>
 <% ========== 画像があれば・・・ ========== %><% def(y/x/imgsrc) %>
-<div class="catalog_img"><a href="<% echo (self) %>?res=<% echo (y/x/no) %>" (by <% echo (y/x/name) %><% echo (y/x/trip) %>)"><img src="<% echo (y/x/imgsrc) %>" alt="<% echo (y/x/sub) %> by <% echo (y/x/name) %><% echo (y/x/trip) %>)" title="<% echo (y/x/sub) %> by <% echo (y/x/name) %><% echo (y/x/trip) %>"></a></div>
+<div class="catalog_img"><a href="<% echo (self) %>?res=<% echo (y/x/no) %>" (by <% echo (y/x/name) %>)"><img src="<% echo (y/x/imgsrc) %>" alt="<% echo (y/x/sub) %> by <% echo (y/x/name) %>)" title="<% echo (y/x/sub) %> by <% echo (y/x/name) %> width="<% echo (y/x/w) %>"<% def(y/x/h) %> height="<% echo (y/x/h) %>"<% /def %>></a></div>
 
 <% /def %>
 <% ========== 文字のみならば・・・ ========== %><% def(y/x/txt) %>

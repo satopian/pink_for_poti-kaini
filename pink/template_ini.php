@@ -1,11 +1,11 @@
 <?php
 /*
-  * Template - PINK - lot.200812  by さとぴあ  >> https://pbbs.sakura.ne.jp/
+  * Template - PINK - lot.200823  by さとぴあ  >> https://pbbs.sakura.ne.jp/
   *
 */
 
 //テンプレートのバージョン
-define('TEMPLATE_VER', "lot.200812");
+define('TEMPLATE_VER', "lot.200823");
 
 
 /* ---------- ADD:2004/06/22 ---------- */
@@ -117,7 +117,7 @@ define('CATALOG_X', '3');
 define('CATALOG_Y', '6');
 
 //カタログの画像幅
-define('CATALOG_W', '200');
+define('CATALOG_W', '300');
 
 //編集したときの目印
 //※記事を編集したら日付の後ろに付きます
