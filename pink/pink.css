@@ -42,6 +42,14 @@ img {
 	border-style: none;
 }
 
+.posted_image img,
+.posted_img_form img,
+.continue_img img {
+	max-width: 100%;
+	height: auto;
+}
+
+
 input[type="text"],
 input[type="submit"],
 input[type="password"],
@@ -853,7 +861,8 @@ a:hover {
 }
 
 .continue_painttime {
-	margin: 0 0 8px
+	margin: 0 auto 8px;
+	max-width: 928px;
 }
 
 /* 掲示板の説明文 */
@@ -1045,17 +1054,6 @@ input.copy_txt::selection {
 	.catalog_wrap {
 		width: 32.32%;
 		margin: 1px 1.52% 11px 0;
-	}
-}
-
-@media screen and (max-width: 899px) {
-
-	/* 899px以下の幅の場合に適用される */
-	.posted_image img,
-	.posted_img_form img,
-	.continue_img img {
-		max-width: 100%;
-		height: auto;
 	}
 }
 
