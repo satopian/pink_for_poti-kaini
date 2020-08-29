@@ -911,10 +911,7 @@ a:hover {
 .posted_image {
 	float: left;
 	margin: 0 0 12px;
-}
-
-.posted_image img {
-	margin-right: 15px;
+	margin-right: 18px;
 }
 
 .article_info_name {
@@ -1069,8 +1066,6 @@ input.copy_txt::selection {
 	}
 	.posted_image {
 		float: none;
-	}
-	.posted_image img {
 		margin-right: 0;
 	}
 	.catalog_desc_wrap {
