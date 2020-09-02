@@ -461,6 +461,9 @@ if(DynamicColor) PaletteListSetColor();
 {/def) 
 -->
 <% /def %>
+<% def(use_select_palettes) %>
+	<span class="palette_type">PALETTE</span> <select name="selected_palette_no" title="パレット" class="paint_select palette_type"><% echo(palette_select_tags) %></select>
+		<% /def %>
 <span class="nk">削除キー<input type="password" name="pwd" size="8" value="" class="paint_password" autocomplete="current-password"></span>
 <!-- NEOを使う -->
 <% def(ctype_pch) %>

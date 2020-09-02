@@ -935,7 +935,7 @@ a:hover {
 	background-color: #ffe4f5
 }
 
-.use_neo,.use_animation {
+.use_neo,.use_animation,.bold_gray {
 	font-weight: 700;
 	color: gray;
 }
@@ -1085,10 +1085,25 @@ input.copy_txt::selection {
 		margin-right: 0;
 	}
 }
+@media screen and (max-width: 639px) {
+	.palette_type {
+		display: none;
+		}
+}
+
+
 @media screen and (max-width: 600px) {
 	.minres_form_table td {
 		display: block;
 		width: 100%;
+	}
+}
+
+@media screen and (min-width: 560px) {
+
+	/* 560px以上の幅の場合に適用される */
+	.nobreak {
+		white-space: nowrap;
 	}
 }
 
@@ -1120,10 +1135,3 @@ input.copy_txt::selection {
 		}
 }
 
-@media screen and (min-width: 560px) {
-
-	/* 560px以上の幅の場合に適用される */
-	.nobreak {
-		white-space: nowrap;
-	}
-}
