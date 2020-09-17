@@ -334,6 +334,11 @@ a:hover {
 	list-style-type: square;
 }
 
+input.pch_upload {
+    font-size: inherit;
+    margin: 8px 0;
+}
+
 /* コメント欄の幅 */
 
 #post_table {
