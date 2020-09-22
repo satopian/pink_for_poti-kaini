@@ -66,7 +66,7 @@
 <% ========== 実際のお絵かきフォーム ========== %>
 <% def(paint) %>
 <form action="<% echo (self) %>" method="post">
-<input name="submit" type="submit" value="PAINT" class="paint_button">
+<input type="submit" value="PAINT" class="paint_button">
 <!-- しぃペインター通常版 -->
 <input type="hidden" name="shi" value="1">
 <% ===キャンバスサイズ 設定はconfig.phpで === %>
@@ -485,4 +485,13 @@ UseFunction - <span title="by WonderCatStudio">動的パレットスクリプト
 
 </div>
 <div id="bottom"></div>
+<script src="<% echo(skindir) %>jquery-3.5.1.min.js"></script>
+<script>
+	$(function(){//2度押し対策
+		$('[type="submit"]').click(function(){
+			$(this).prop('disabled',true);
+			$(this).closest('form').submit();
+		});
+	});
+</script>
 </body></html>
