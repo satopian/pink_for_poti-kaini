@@ -842,7 +842,8 @@ input.pch_upload {
 }
 
 .palette_select {
-	margin: 2px 0
+	margin: 2px 0;
+	min-width: 130px;
 }
 
 .paintbbs_memo {
