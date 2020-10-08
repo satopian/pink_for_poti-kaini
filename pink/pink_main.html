@@ -196,13 +196,14 @@ PMAX_H //高さ
 	<% def(upfile) %>
 	 <tr>
 	  <td class="post_table_title">添付画像</td>
-	  <td><input type="file" name="upfile" accept="image/*"><label class="howtoedit"><input type="checkbox" name="textonly" value="on"<% def(resno) %> checked<% /def %>>画像なし</label></td>
+	  <td><input type="file" name="upfile" accept="image/*">
+		<% def(hide_the_checkbox_for_nofile) %>
+		<% elsedef %>
+		<label class="howtoedit"><input type="checkbox" name="textonly" value="on"<% def(resno) %> checked<% /def %>>画像なし</label>
+		<% /def %>
+		
+	</td>
 	 </tr>
-	 <% def(n) %>
-	 <!--
-	<% レス時は画像なしにデフォでチェックする(文字レス優先)%>
-	-->
-	<% /def %>
 	<% /def %>
 	 <tr>
 	  <td class="post_table_title">削除キー</td>
@@ -377,7 +378,8 @@ PMAX_H //高さ
 <table class="minres_form_table">
 <input type="hidden" name="mode" value="regist">
 <input type="hidden" name="resto" value="<% echo (oya/no) %>">
-<input type="hidden" name="textonly" value="on"><% ========== ←v1.3b3以降必須 ========== %>
+<input type="hidden" name="textonly" value="on">
+<% ========== ←v1.3b3以降必須 ========== %>
 <tr><td class="minres_title">名前<% def(usename) %>(必須)<% /def %></td><td><input type="text" name="name" class="minres_input_text" autocomplete="username"></td>
 <td class="minres_title">題名<% def(usesub) %>(必須)<% /def %></td><td><input type="text" name="sub" value="<% echo (oya/resub) %>" class="minres_input_text" autocomplete="off"></td>
 </tr>

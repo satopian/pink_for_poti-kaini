@@ -338,7 +338,12 @@ PMAX_H //高さ
 
 	 <tr>
   <td class="post_table_title">添付画像</td>
-  <td><input type="file" name="upfile" accept="image/*"><label class="checkbox textonly"> <input type="checkbox" name="textonly" value="on" checked>画像なし</label></td>
+  <td><input type="file" name="upfile" accept="image/*">
+	<% def(hide_the_checkbox_for_nofile) %>
+	<% elsedef %>
+	<label class="checkbox textonly"> <input type="checkbox" name="textonly" value="on" checked>画像なし</label>
+	<% /def %>
+ </td>
  </tr>
 <% /def %>
  <tr>
@@ -353,7 +358,10 @@ PMAX_H //高さ
 <% ========== ファイルアップロード時の説明 ========== %>
 <% def(upfile) %>
 	<ul class="howtowrite">
-	<li>画像を添付する場合は画像なしのチェックを外してください。</li>
+		<% def(hide_the_checkbox_for_nofile) %>
+		<% elsedef %>
+		<li>画像を添付する場合は画像なしのチェックを外してください。</li>
+		<% /def %>
 	<li>最大投稿データ量は <% echo (maxkb) %> KB までです。</li>
 	<% echo (addinfo) %>
 	</ul>
