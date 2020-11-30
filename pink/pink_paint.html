@@ -40,18 +40,16 @@
 		}
 		}
 	</script>
-	<% def(useneo) %>
+<% def(useneo) %>
 <link rel="stylesheet" href="neo.css?<% echo(stime) %>" type="text/css" />
 <script src="neo.js?<% echo(stime) %>" charset="UTF-8"></script>
 <% /def %>
-<% def(paintbbs) %>
 <% def(pch_mode) %>
+<% def(type_neo) %>
 <link rel="stylesheet" href="neo.css?<% echo(stime) %>" type="text/css" />
 <script src="neo.js?<% echo(stime) %>" charset="UTF-8"></script>
 <% /def %>
 <% /def %>
-<% def(paintbbs) %>
-<% elsedef %>
 <!-- Javaが使えるかどうか判定 -->
 <script>
         function cheerpJLoad() {
@@ -66,8 +64,6 @@
         }
         window.addEventListener("load", function() { cheerpJLoad(); }, false);
 </script>
-<% /def %>
-
 
 </head>
 <body>
@@ -134,7 +130,7 @@
 <% def(paint_mode) %>
 <nav>
 <div style= "min-width:calc(<% echo(w) %>px + 176px)" id="self2"> [<a href="<% echo(self2) %>"><% echo(title) %></a>] 
-<% def(paintbbs) %>
+<% def(useneo) %>
 <span class="nts_radiowrap">ツールを
 	<input type="radio" name="1" id="1" onclick="Neo.setToolSide(true)" class="nts_radio"><label class="ntslabel" for="1">左へ</label>
 	<input type="radio" name="1" id="2" onclick="Neo.setToolSide(false)" checked="checked" class="nts_radio"><label class="ntslabel" for="2">右へ</label>
@@ -173,12 +169,11 @@ pe[n]}}function GradView(a,f){d=document}function showHideLayer(){d=document;var
 <% ========== 動的パレットスクリプト ここまで ========== %>
 <NOSCRIPT><H3>JavaScriptが有効でないため正常に動作致しません</H3></NOSCRIPT>
 <div class="appstage"><div class="app">
-<%  <APPLET～</APPLET>の～部分の詳しい事は、PaintBBS及びしぃペインターのReadmeを参照  %>
+<%  <applet～</applet>の～部分の詳しい事は、PaintBBS及びしぃペインターのReadmeを参照  %>
 <% ========== PaintBBS個別設定 ========== %>
 <% def(paintbbs) %>
 <!-- NEOを使う時はアプレットを読み込まないように -->
-<% def(useneo) %><APPLET-DUMMY 
-	<% elsedef %><APPLET<% /def %>
+<% def(useneo) %><applet-dummy <% elsedef %><applet <% /def %>
 
  CODE="pbbs.PaintBBS.class" ARCHIVE="./PaintBBS.jar" NAME="paintbbs" WIDTH="<% echo(w) %>" HEIGHT="<% echo(h) %>" MAYSCRIPT>
  <param name="neo_confirm_unload" value="true">
@@ -201,7 +196,7 @@ pe[n]}}function GradView(a,f){d=document}function showHideLayer(){d=document;var
 <applet code="c.ShiPainter.class" archive="spainter_all.jar" name="paintbbs" WIDTH="<% echo(w) %>" HEIGHT="<% echo(h) %>" MAYSCRIPT>
 <param name=dir_resource value="./">
 <param name="tt.zip" value="tt_def.zip">
-<param name="res.zip" value="res.zip"><% しぃペインターv1.05_9以前を使うなら res_pro.zip に変更 %>
+<param name="res.zip" value="res.zip">
 <param name=tools value="pro">
 <param name=layer_count value="<% echo(layer_count) %>">
 <% def(quality) %>
@@ -251,8 +246,8 @@ pe[n]}}function GradView(a,f){d=document}function showHideLayer(){d=document;var
 <% def(cpal) %><% each(cpal) %>
 <param name="color_<% echo(cpal/no) %>" value="#<% echo(cpal/pal) %>">
 <% /each %><% /def %>
-	<% def(useneo) %></APPLET-DUMMY>
-	<% elsedef %></APPLET><% /def %>
+	<% def(useneo) %></applet-dummy>
+	<% elsedef %></applet><% /def %>
 </div>
 <% ========== 動的パレット制御関連 ========== %>
 <div class="palette_wrap">
@@ -361,15 +356,16 @@ if(DynamicColor) PaletteListSetColor();
 // datasize…動画ファイルサイズ(Byte)
 -->
 <% /def %>
-<% <div id="mode_head">動画表示モード</div> %>
 <% def(pch_mode) %>
 	</header>
 <div class="appstage" style="width:<% echo(w) %>px; height:<% echo(h) %>px">
 <% def(paintbbs) %>
-<APPLET-DUMMY name="pch" code="pch.PCHViewer.class" archive="PCHViewer.jar,PaintBBS.jar" width="<% echo(w) %>" height="<% echo(h) %>" MAYSCRIPT>
+<% def(type_neo) %><applet-dummy <% elsedef %>
+<applet <% /def %>
+name="pch" code="pch.PCHViewer.class" archive="PCHViewer.jar,PaintBBS.jar" width="<% echo(w) %>" height="<% echo(h) %>" MAYSCRIPT>
 <% /def %>
 <% def(normal) %>
-<APPLET name="pch" code="pch2.PCHViewer.class" archive="PCHViewer.jar,spainter_all.jar" codebase="./" width="<% echo(w) %>" height="<% echo(h) %>">
+<applet name="pch" code="pch2.PCHViewer.class" archive="PCHViewer.jar,spainter_all.jar" codebase="./" width="<% echo(w) %>" height="<% echo(h) %>">
 <param name="res.zip" value="res.zip"><% しぃペインターv1.05_9以前を使うなら res_normal.zip に変更 %>
 <param name="tt.zip" value="tt_def.zip">
 <param name="tt_size" value="31">
@@ -380,7 +376,7 @@ if(DynamicColor) PaletteListSetColor();
 <param name="speed" value="<% echo(speed) %>">
 <param name="buffer_progress" value="false">
 <param name="buffer_canvas" value="false">
-</APPLET>
+</applet>
 </div>
 <div class="pch_download">
 <A href="<% echo(pchfile) %>" target="_blank" rel="noopener noreferrer">Download</A><br>
