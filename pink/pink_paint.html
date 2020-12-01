@@ -245,9 +245,13 @@ pe[n]}}function GradView(a,f){d=document}function showHideLayer(){d=document;var
 <% ========== アプレットのカラー設定(変更可) ここまで ========== %>
 <% def(cpal) %><% each(cpal) %>
 <param name="color_<% echo(cpal/no) %>" value="#<% echo(cpal/pal) %>">
-<% /each %><% /def %>
-	<% def(useneo) %></applet-dummy>
-	<% elsedef %></applet><% /def %>
+<% /each %>
+<% /def %>
+<% def(useneo) %>
+</applet-dummy>
+<% elsedef %>
+</applet>
+<% /def %>
 </div>
 <% ========== 動的パレット制御関連 ========== %>
 <div class="palette_wrap">
@@ -376,8 +380,12 @@ name="pch" code="pch.PCHViewer.class" archive="PCHViewer.jar,PaintBBS.jar" width
 <param name="speed" value="<% echo(speed) %>">
 <param name="buffer_progress" value="false">
 <param name="buffer_canvas" value="false">
+<% def(type_neo) %>
+</applet-dummy>
+<% elsedef %>
 </applet>
-</div>
+<% /def %>
+	</div>
 <div class="pch_download">
 <A href="<% echo(pchfile) %>" target="_blank" rel="noopener noreferrer">Download</A><br>
 <small>Datasize : <% echo(datasize) %> byte</small><br>
