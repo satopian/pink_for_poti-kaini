@@ -5,7 +5,18 @@
 */
 
 //テンプレートのバージョン
-define('TEMPLATE_VER', "lot.201030");
+define('TEMPLATE_VER', "lot.201222");
+
+//一般的なメッセージ
+
+//投稿者名を引用する時の敬称、ただし名前の末尾に入る
+define('HONORIFIC_SUFFIX', 'さん');
+//アップロードした画像の呼称
+define('UPLOADED_OBJECT_NAME', '画像');
+//アップロードに成功した時のメッセージ
+define('UPLOAD_SUCCESSFUL', 'のアップロードが成功しました');
+//投稿が終了して画面が切り替わる時のメッセージ
+define('THE_SCREEN_CHANGES', '画面を切り替えます');
 
 
 /* ---------- ADD:2004/06/22 ---------- */

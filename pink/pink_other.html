@@ -340,7 +340,6 @@ l(); //LoadCookie
 
 <input type="submit" value="削除する"><input type="reset" value="リセット">
 <label class="checkbox"><input type="checkbox" name="onlyimgdel" value="on">画像だけ消す</label>
-	</form>
 </p>
 <table class="admindel_table">
  <tr bgcolor="#FFB5E6">
@@ -356,12 +355,10 @@ l(); //LoadCookie
  </tr>
 <% def(del) %><% each(del) %>
  <tr bgcolor="<% echo(del/bg) %>">
-  <th class="delcheck"><label class="checkbox_nt"><input form="delete" type="checkbox" name="del[]" value="<% echo(del/no) %>"></label></th>
+  <th class="delcheck"><label class="checkbox_nt"><input type="checkbox" name="del[]" value="<% echo(del/no) %>"></label></th>
 
   <th class="nobreak">
- <form action="<% echo(self) %>" method="post" id="form<% echo(del/no) %>">
-<input type="hidden" name="del[]" value="<% echo(del/no) %>"><input type="hidden" name="pwd" value="<% echo(pass) %>"><input type="hidden" name="mode" value="edit">
-<a href="javascript:form<% echo(del/no) %>.submit()"><% echo(del/no) %></a></form>
+<% echo(del/no) %>
   
   </th>
   <td><small><% echo(del/now) %></small></td>
@@ -375,8 +372,10 @@ l(); //LoadCookie
 <% /each %><% /def %>
 </table>
 <p>
-<input form="delete" type="submit" value="削除する"><input form="delete" type="reset" value="リセット">
+<input type="submit" value="削除する"><input form="delete" type="reset" value="リセット">
 <label class="checkbox"><input form="delete" type="checkbox" name="onlyimgdel" value="on">画像だけ消す</label>
+</form>
+
 </p>
 
 <p>【 画像データ合計 : <b><% echo(all) %></b> KB 】</p>
