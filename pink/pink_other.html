@@ -256,6 +256,16 @@ PMAX_H //高さ
  </tr>
 </table>
 </form>
+<script src="<% echo(skindir) %>jquery-3.5.1.min.js"></script>
+<script>
+	$(function(){//2度押し対策
+		$('[type="submit"]').click(function(){
+			$(this).prop('disabled',true);
+			$(this).closest('form').submit();
+		});
+	});
+</script>
+
 <% ========== 新規投稿のみクッキーを読込み ========== %>
 <% def(regist) %>
 <script>
@@ -320,9 +330,10 @@ l(); //LoadCookie
 <div id="self2">
     [<a href="<% echo(self2) %>"><% echo(title) %></a>] </div>
 </header>
-<div class="centering">
+  <div class="centering">
 <p>
-削除したい記事のチェックボックスにチェックを入れ、削除ボタンを押して下さい。
+削除したい記事のチェックボックスにチェックを入れ、削除ボタンを押して下さい。<br>
+<span class="hensyu">（記事Noをクリックすると編集できます）</span></p>
 <p>
 <form action="<% echo(self) %>" method="post">
 <input type="hidden" name="admin" value="update">
@@ -339,6 +350,7 @@ l(); //LoadCookie
 
 <input type="submit" value="削除する"><input type="reset" value="リセット">
 <label class="checkbox"><input type="checkbox" name="onlyimgdel" value="on">画像だけ消す</label>
+	</form>
 </p>
 <table class="admindel_table">
  <tr bgcolor="#FFB5E6">
@@ -354,10 +366,12 @@ l(); //LoadCookie
  </tr>
 <% def(del) %><% each(del) %>
  <tr bgcolor="<% echo(del/bg) %>">
-  <th class="delcheck"><label class="checkbox_nt"><input type="checkbox" name="del[]" value="<% echo(del/no) %>"></label></th>
+  <th class="delcheck"><label class="checkbox_nt"><input form="delete" type="checkbox" name="del[]" value="<% echo(del/no) %>"></label></th>
 
   <th class="nobreak">
-<% echo(del/no) %>
+ <form action="<% echo(self) %>" method="post" id="form<% echo(del/no) %>">
+<input type="hidden" name="del[]" value="<% echo(del/no) %>"><input type="hidden" name="pwd" value="<% echo(pass) %>"><input type="hidden" name="mode" value="edit">
+<a href="javascript:form<% echo(del/no) %>.submit()"><% echo(del/no) %></a></form>
   
   </th>
   <td><small><% echo(del/now) %></small></td>
@@ -371,10 +385,8 @@ l(); //LoadCookie
 <% /each %><% /def %>
 </table>
 <p>
-<input type="submit" value="削除する"><input form="delete" type="reset" value="リセット">
+<input form="delete" type="submit" value="削除する"><input form="delete" type="reset" value="リセット">
 <label class="checkbox"><input form="delete" type="checkbox" name="onlyimgdel" value="on">画像だけ消す</label>
-</form>
-
 </p>
 
 <p>【 画像データ合計 : <b><% echo(all) %></b> KB 】</p>
@@ -424,14 +436,5 @@ UseFunction - <span title="by WonderCatStudio">動的パレットスクリプト
 </div>
 </footer>
 </div>
-<script src="<% echo(skindir) %>jquery-3.5.1.min.js"></script>
-<script>
-	$(function(){//2度押し対策
-		$('[type="submit"]').click(function(){
-			$(this).prop('disabled',true);
-			$(this).closest('form').submit();
-		});
-	});
-</script>
 </body>
 </html>
