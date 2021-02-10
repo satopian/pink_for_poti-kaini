@@ -1,11 +1,11 @@
 <?php
 /*
-  * Template - PINK - lot.201030  by さとぴあ  >> https://pbbs.sakura.ne.jp/
+  * Template - PINK - lot.210210  by さとぴあ  >> https://pbbs.sakura.ne.jp/
   *
 */
 
 //テンプレートのバージョン
-define('TEMPLATE_VER', "lot.201222");
+define('TEMPLATE_VER', "lot.210210");
 
 //一般的なメッセージ
 
@@ -60,7 +60,7 @@ define('MSG036', "本文にURLを書く事はできません。");
 define('MSG037', "その名前は使えません。");
 define('MSG038', "そのタグは使えません。");
 define('MSG039', "コメントのみの新規投稿はできません。");
-define('MSG040', "予備");
+define('MSG040', "管理者パスワードが設定されていません。");
 
 
 /* ---------- ADD:2004/03/16 ---------- */
