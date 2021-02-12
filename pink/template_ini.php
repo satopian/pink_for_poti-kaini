@@ -1,11 +1,11 @@
 <?php
 /*
-  * Template - PINK - lot.210210  by さとぴあ  >> https://pbbs.sakura.ne.jp/
+  * Template - PINK - lot.210212  by さとぴあ  >> https://pbbs.sakura.ne.jp/
   *
 */
 
 //テンプレートのバージョン
-define('TEMPLATE_VER', "lot.210210");
+define('TEMPLATE_VER', "lot.210212");
 
 //一般的なメッセージ
 
@@ -61,7 +61,11 @@ define('MSG037', "その名前は使えません。");
 define('MSG038', "そのタグは使えません。");
 define('MSG039', "コメントのみの新規投稿はできません。");
 define('MSG040', "管理者パスワードが設定されていません。");
-
+define('MSG041', "がありません");
+define('MSG042', "を読めません");
+define('MSG043', "を書けません");
+define('MSG044', "最大ログ数が設定されていないか、数字以外の文字列が入っています。");
+define('MSG045', "アニメファイルをアップロードしてください。<br>対応フォーマットはpch、spchです。");
 
 /* ---------- ADD:2004/03/16 ---------- */
 
