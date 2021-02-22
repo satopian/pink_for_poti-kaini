@@ -5,7 +5,7 @@
 */
 
 //テンプレートのバージョン
-define('TEMPLATE_VER', "lot.210214");
+define('TEMPLATE_VER', "lot.210222");
 
 //一般的なメッセージ
 
