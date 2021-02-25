@@ -1,17 +1,17 @@
 # POTI-board用テーマPINK 改二
 
-**[POTI-board改二](https://github.com/sakots/poti-kaini)用のテンプレートです。**
+**[POTI-board改二](https://github.com/satopian/poti-kaini)用のテンプレートです。**
 
 **「POTI-board改」と「POTI-board改二」のテンプレートは互換性がありません。**
 
 間違えると掲示板が動作しなくなりますのでご注意ください。
 
 POTI-board改はサポートを終了し改二に移行しました。
-新規設置を検討されている方は、より高速に動作する[POTI-board改二](https://github.com/sakots/poti-kaini)の利用をご検討ください。
+新規設置を検討されている方は、より高速に動作する[POTI-board改二](https://github.com/satopian/poti-kaini)の利用をご検討ください。
 
 ## サポート
 
-[POTI改公式サイト](https://poti-k.info/)の設置サポート掲示板で対応します。
+[設置サポート掲示板](https://pbbs.sakura.ne.jp/cgi/neosample/support/)で対応します。
 GitHubの[Issues](https://github.com/satopian/pink_for_pot-kaini/issues)でも対応できると思います。
 
 ### 設置サンプル
