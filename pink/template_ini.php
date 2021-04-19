@@ -1,11 +1,11 @@
 <?php
 /*
-  * Template - PINK - lot.210214  by さとぴあ  >> https://pbbs.sakura.ne.jp/
+  * Template - PINK - lot.lot.210309  by さとぴあ  >> https://pbbs.sakura.ne.jp/
   *
 */
 
 //テンプレートのバージョン
-define('TEMPLATE_VER', "lot.210222");
+define('TEMPLATE_VER', "lot.210309");
 
 //一般的なメッセージ
 
