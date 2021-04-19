@@ -102,7 +102,6 @@
 // pchfile…動画ファイル名(動画から続きを描く場合)
 // imgfile…画像ファイル名(画像から続きを描く場合)
 // usercode…ユーザーコード(投稿者認識用)
-// cpal…お絵かき開始前にパレットを指定したとき、初期パレット配列データが入る
 // security…セキュリティが有効な場合 true が入る
 // security_click…セキュリティクリック数
 // security_timer…セキュリティタイマー(秒)
@@ -243,10 +242,6 @@ pe[n]}}function GradView(a,f){d=document}function showHideLayer(){d=document;var
 <% ========== 共通設定(変更不可) ここまで ========== %>
 <% ========== アプレットのカラー設定(変更可) ========== %>
 <% ========== アプレットのカラー設定(変更可) ここまで ========== %>
-<% def(cpal) %><% each(cpal) %>
-<param name="color_<% echo(cpal/no) %>" value="#<% echo(cpal/pal) %>">
-<% /each %>
-<% /def %>
 <% def(useneo) %>
 </applet-dummy>
 <% elsedef %>
