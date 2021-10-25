@@ -11,16 +11,16 @@ POTI-board改はサポートを終了し改二に移行しました。
 
 ## サポート
 
-[POTI改設置サポート掲示板](https://pbbs.sakura.ne.jp/cgi/neosample/support/)で対応します。
+[POTI改設置サポート掲示板](https://paintbbs.sakura.ne.jp/cgi/neosample/support/)で対応します。
 GitHubの[Issues](https://github.com/satopian/pink_for_pot-kaini/issues)でも対応できると思います。
 
 ### 設置サンプル
 
-[POTI-board用テーマ PINK 設置サンプル](https://pbbs.sakura.ne.jp/cgi/neosample/poti/)
+[POTI-board用テーマ PINK 設置サンプル](https://paintbbs.sakura.ne.jp/cgi/neosample/poti/)
 
 ### 特徴
 
-[お絵かき掲示板](https://pbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしたものです。
+[お絵かき掲示板](https://paintbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしたものです。
 
 [POTI-board用テーマ PINK を配布します。: STP^3](http://stp.sblo.jp/article/182310034.html)
 
