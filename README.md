@@ -22,7 +22,7 @@ GitHubの[Issues](https://github.com/satopian/pink_for_pot-kaini/issues)でも�
 
 [お絵かき掲示板](https://paintbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしたものです。
 
-[POTI-board用テーマ PINK を配布します。: STP^3](http://stp.sblo.jp/article/182310034.html)
+[POTI-board用テーマ PINK を配布します。: STP^3](http://satopian.sblo.jp/article/189094046.html)
 
 BBSNoteのようなレイアウト。
 
