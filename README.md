@@ -1,6 +1,6 @@
 # POTI-board用テーマPINK
 
-###テンプレートエンジンSkinny.php対応版です。
+### テンプレートエンジンSkinny.php対応版です。
 
 [POTI-board EVO](https://github.com/satopian/poti-kaini)のバージョン5で、テンプレートエンジンがBladeに変更になりました。  
 そのため、こちらのテンプレートとの互換性がなくなりました。  
